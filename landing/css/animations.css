@@ -1,0 +1,54 @@
+.type{
+	position: absolute;
+	opacity: 0;
+	-webkit-animation: words 24s steps(48) infinite 0s;
+}
+.type:nth-child(2) { 
+  -webkit-animation-delay: 4s; 
+  animation-delay: 4s; 
+}
+.type:nth-child(3) { 
+  -webkit-animation-delay: 8s;
+  animation-delay: 8s; 
+}
+.type:nth-child(4) { 
+  -webkit-animation-delay: 12s;
+	animation-delay: 12s; 
+}
+.type:nth-child(5) { 
+  -webkit-animation-delay: 16s; 
+	animation-delay: 16s; 
+}
+.type:nth-child(6) { 
+  -webkit-animation-delay: 20s;
+	animation-delay: 20s; 
+}
+
+@-webkit-keyframes words {
+  0% { opacity: 0; width: 0; }
+  2% { opacity: 1;}
+  14% { opacity: 1; width: 48ch;}
+  15% { opacity: 0; }
+}
+
+span > span {
+	animation: cursor 0.8s infinite;
+}
+
+@keyframes cursor {
+	0% {
+		opacity: 0;
+	}
+	20% { 
+		opacity: 0;
+	}
+	30% {
+		opacity: 1;
+	}
+	90% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0;
+	}
+}

@@ -52,7 +52,7 @@ Physics(function (world) {
     // create some bodies
     var logos = [];
 
-    for (var i = 0, l = 180; i < l; ++i) {
+    for (var i = 0, l = 100; i < l; ++i) {
 
         logos.push(
         Physics.body('circle', {
