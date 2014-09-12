@@ -53,20 +53,23 @@ Physics(function (world) {
     var logos = [];
 
     for (var i = 0, l = 100; i < l; ++i) {
-
-        logos.push(
+        // circular person
+        var person =  
         Physics.body('circle', {
             x: Math.random() * (viewWidth - 10) + 10,
             y: Math.random() * (viewHeight - 10) + 10,
             mass: 1,
-            radius: 6,
+            radius: 25,
             vx: Math.random() * 0.01 - 0.005,
             vy: Math.random() * 0.01 - 0.005,
             restitution: 0.99,
             styles: {
                 fillStyle: '#d3d3d3'
             }
-        }));
+        });
+        person.view = new Image();
+        person.view.src = '../landing/images/people/john.png';
+        logos.push(person)
     }
     // logos.view = new Image();
     // logos.view.src = 'clear.png';
