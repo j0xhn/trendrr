@@ -14,10 +14,6 @@ h1 span{
 }
 
 /* text rotation */
-.rw-sentence-IE{
-	display: none;
-	padding: 30px;
-}
 .rw-wrapper{
 	width: 80%;
 	position: relative;
@@ -35,12 +31,11 @@ h1 span{
 .rw-sentence span{
 	color: #444;
 	white-space: nowrap;
-	font-size: 200%;
+	font-size: 24px;
 	font-weight: normal;
 }
 .rw-words{
 	display: inline;
-	text-indent: 10px;
 }
 .rw-words span{
 	position: absolute;
