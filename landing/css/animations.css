@@ -1,149 +1,23 @@
-/*Animation for text to appear*/
-body{font-family: 'Helvetica-Nue', cursive;
-		background: #fff 
-		text-align:center
+.element { display: inline-block;}
+.typed-cursor{
+    opacity: 1;
+    display: inline-block;
+    -webkit-animation: blink 0.7s infinite;
+    -moz-animation: blink 0.7s infinite;
+    animation: blink 0.7s infinite;
 }
-h1{
-	color:#900; 
-	font-size:56px
+@keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
 }
-h1 span{
-	color:#6b739d;
-	display:block; 
-	font-size:42px
+@-webkit-keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
 }
-
-/* text rotation */
-.rw-wrapper{
-	width: 80%;
-	position: relative;
-	margin: 110px auto 0 auto;
-	font-family: 'Bree Serif';
-	padding: 10px;
-	height: 400px;
-	overflow: hidden;
+@-moz-keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
 }
-.rw-sentence{
-	margin: 0;
-	text-align: left;
-	text-shadow: 1px 1px 1px rgba(255,255,255,0.8);
-}
-.rw-sentence span{
-	color: #444;
-	white-space: nowrap;
-	font-size: 24px;
-	font-weight: normal;
-}
-.rw-words{
-	display: inline;
-}
-.rw-words span{
-	position: absolute;
-	opacity: 0;
-	overflow: hidden;
-	color: #888;
-	-webkit-transform-origin: 10% 75%;
-	-moz-transform-origin: 10% 75%;
-	-ms-transform-origin: 10% 75%;
-	-o-transform-origin: 10% 75%;
-	transform-origin: 10% 75%;
-}
-.rw-words-1 span{
-      -webkit-animation: rotateWord 16s linear infinite 0s;
-	-moz-animation: rotateWord 16s linear infinite 0s;
-	-o-animation: rotateWord 16s linear infinite 0s;
-	-ms-animation: rotateWord 16s linear infinite 0s;
-	animation: rotateWord 16s linear infinite 0s;
-}
-.rw-words-2 span{
-    -webkit-animation: rotateWordsSecond 18s linear infinite 0s;
-    -moz-animation: rotateWordsSecond 18s linear infinite 0s;
-    -o-animation: rotateWordsSecond 18s linear infinite 0s;
-    -ms-animation: rotateWordsSecond 18s linear infinite 0s;
-    animation: rotateWordsSecond 18s linear infinite 0s;
-}
-.rw-words span:nth-child(2) { 
-    -webkit-animation-delay: 3s; 
-	-moz-animation-delay: 3s; 
-	-o-animation-delay: 3s; 
-	-ms-animation-delay: 3s; 
-	animation-delay: 3s; 
-	color: #6b889d;
-}
-.rw-words span:nth-child(3) { 
-    -webkit-animation-delay: 6s; 
-	-moz-animation-delay: 6s; 
-	-o-animation-delay: 6s; 
-	-ms-animation-delay: 6s; 
-	animation-delay: 6s; 
-	color: #6b739d;	
-}
-.rw-words span:nth-child(4) { 
-    -webkit-animation-delay: 9s;
-	-moz-animation-delay: 9s; 
-	-o-animation-delay: 9s; 
-	-ms-animation-delay: 9s; 
-	animation-delay: 9s; 
-	color: #7a6b9d;
-}
-.rw-words span:nth-child(5) { 
-    -webkit-animation-delay: 12s; 
-	-moz-animation-delay: 12s; 
-	-o-animation-delay: 12s; 
-	-ms-animation-delay: 12s; 
-	animation-delay: 12s; 
-	color: #8d6b9d;
-}
-.rw-words span:nth-child(6) { 
-    -webkit-animation-delay: 15s;
-	-moz-animation-delay: 15s; 
-	-o-animation-delay: 15s; 
-	-ms-animation-delay: 15s; 
-	animation-delay: 15s; 
-	color: #9b6b9d;
-}
-
-@-o-keyframes rotateWordsSecond {
-    0% { opacity: 1; -o-animation-timing-function: ease-in; width: 0px; }
-    10% { opacity: 0.3; width: 0px; }
-    20% { opacity: 1; width: 100%; }
-    27% { opacity: 0; width: 100%; }
-    100% { opacity: 0; }
-}
-@-webkit-keyframes rotateWordsSecond {
-    0% { opacity: 1; -webkit-animation-timing-function: ease-in; width: 0px; }
-    10% { opacity: 0.3; width: 0px; }
-    20% { opacity: 1; width: 100%; }
-    27% { opacity: 0; width: 100%; }
-    100% { opacity: 0; }
-}
-@-ms-keyframes rotateWordsSecond {
-    0% { opacity: 1; -ms-animation-timing-function: ease-in; width: 0px; }
-    10% { opacity: 0.3; width: 0px; }
-    20% { opacity: 1; width: 100%; }
-    27% { opacity: 0; width: 100%; }
-    100% { opacity: 0; }
-}
-@-moz-keyframes rotateWordsSecond {
-    0% { opacity: 1; -moz-animation-timing-function: ease-in; width: 0px; }
-    10% { opacity: 0.3; width: 0px; }
-    20% { opacity: 1; width: 100%; }
-    27% { opacity: 0; width: 100%; }
-    100% { opacity: 0; }
-}
-@keyframes rotateWordsSecond {
-    0% { opacity: 1; animation-timing-function: ease-in; width: 0px; }
-    10% { opacity: 0.3; width: 0px; }
-    20% { opacity: 1; width: 100%; }
-    27% { opacity: 0; width: 100%; }
-    100% { opacity: 0; }
-}
-@media screen and (max-width: 768px){
-	.rw-sentence { font-size: 18px; }
-}
-@media screen and (max-width: 320px){
-	.rw-sentence { font-size: 9px; }
-}
-.no-cssanimations .rw-wrapper .rw-sentence span:first-child{
-				opacity: 1;
-			}

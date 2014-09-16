@@ -59,7 +59,7 @@ Physics(function (world) {
             x: Math.random() * (viewWidth - 10) + 10,
             y: Math.random() * (viewHeight - 10) + 10,
             mass: 1,
-            radius: 25,
+            radius: 9,
             vx: Math.random() * 0.01 - 0.005,
             vy: Math.random() * 0.01 - 0.005,
             restitution: 0.99,

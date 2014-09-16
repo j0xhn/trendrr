@@ -1,30 +1,28 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:600italic,300,600,800,400' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" type="text/css" href="css/main.css">
     <link rel="stylesheet" type="text/css" href="css/animations.css">
 </head>
 <body>
     <canvas id="viewport"></canvas>
-    <br />
-    <section class="rw-wrapper">
-        <h1>
-          Context is King
-      </h1>
-      <h2 class="rw-sentence">
-        <br />
-        <span>Passionate people coming together to share, rate, and talk about</span>
-        <div class="rw-words rw-words-2">
-            <span>breathtaking moments lovely sounds</span>
-            <span>incredible magic</span>
-            <span>unseen experiences</span>
-            <span>happy feelings</span>
-            <span>beautiful butterflies</span>
-        </div>
-        <br />
-    </section>
+    <div class="element"></div>
 </body>
+
 <!-- <script src="js/physicsjs-full-0.6.0.min.js"> // for floating people</script>
 <script src="js/newtonRevenge.js"> // for floating people</script> -->
+<script src="js/jquery-2.1.0.min.js"></script>
+<script src="js/typed.js"></script>
+<script>
+    $(function(){
+        console.log('start typing')
+        $(".element").typed({
+        strings: ["First sentence.", "Second sentence."],
+        typeSpeed: 0
+        });
+    });
+</script>
 <script src="js/main.js"> // main javascript</script>
+
 </html>
