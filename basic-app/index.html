@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="trendrr" ng-controller="listCtrl">
 
 <head>
 
@@ -32,35 +32,26 @@
 
         <div id="wrapper">
 
-            <!-- Sidebar -->
+<!-- Sidebar -->
             <div id="sidebar-wrapper">
                 <ul class="sidebar-nav">
                     <li class="sidebar-brand">
                         <a href="#">
-                            Start Bootstrap
+                            Filters
                         </a>
                     </li>
                     <li>
-                        <a href="#">Item1</a>
+                       <a class="filter" data-filter="all">All</a>
+               
                     </li>
                     <li>
-                        <a href="#">Shortcuts</a>
+                        <a class="filter" data-filter=".category-1">Category 1
+                </a>
                     </li>
                     <li>
-                        <a href="#">Overview</a>
+                        <a class="filter active" data-filter=".category-2">Category 2</button></a>
                     </li>
-                    <li>
-                        <a href="#">Events</a>
-                    </li>
-                    <li>
-                        <a href="#">About</a>
-                    </li>
-                    <li>
-                        <a href="#">Services</a>
-                    </li>
-                    <li>
-                        <a href="#">Contact</a>
-                    </li>
+                  
                 </ul>
             </div>
 
@@ -68,46 +59,40 @@
 
 
 
-            <!-- Header -->
+<!-- Header -->
             <header>
-                <a class="header-logo" href="#menu-toggle" id="menu-toggle">trendrr</a>
+              <div class="controls">
+
+                <div class='controls-left'>
+
+                  <a class="header-logo" href="#menu-toggle" id="menu-toggle">trendrr</a>
+
+                  <p>{{test}}</p>
+
+                  <input>
+                </div>
+
+                <div class='controls-right'>
+
+                  <button class="sort" data-sort="myorder:asc" style="display:none"><span class="glyphicon glyphicon-chevron-up"></span></button>
+                  <button class="sort" data-sort="myorder:desc"><span class="glyphicon glyphicon-chevron-down"></span></button>
+
+                  <button id="ChangeLayout"><span class="glyphicon glyphicon-th"></span></button>
+
+                </div>
+
+              </div>
             </header>
 
 
 
 
-            <!-- Hero Section -->
-            <section class="hero">
 
-            </section>
-
-
-
-
-
-            <!-- Page Content -->
-
-            <div class="controls">
-
-                <label>Filters:</label>
-
-                <button class="filter" data-filter="all">All</button>
-                <button class="filter" data-filter=".category-1">Category 1</button>
-                <button class="filter active" data-filter=".category-2">Category 2</button>
-
-                <div class='controls-right'>
-
-                    <button class="sort" data-sort="myorder:asc"><span class="glyphicon glyphicon-chevron-up"></span></button>
-                    <button class="sort" data-sort="myorder:desc" style="display:none"><span class="glyphicon glyphicon-chevron-down"></span></button>
-
-                    <button id="ChangeLayout"><span class="glyphicon glyphicon-th"></span></button>
-
-                </div>
-
-            </div>
+<!-- Page Content -->
 
             <div id="list-container" class="container">
-                <div class="mix category-1" data-myorder="1"></div>
+                test
+                <div class="mix category-1" data-myorder=""></div>
                 <div class="mix category-1" data-myorder="2"></div>
                 <div class="mix category-1" data-myorder="3"></div>
                 <div class="mix category-2" data-myorder="4"></div>
@@ -130,7 +115,8 @@
 
 
 
-
+      <!-- Angular 1.2 -->
+      <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular.min.js"></script>
       <!-- jQuery Version 1.11.0 -->
       <script src="js/jquery-1.11.0.js"></script>
 

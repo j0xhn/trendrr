@@ -4,19 +4,13 @@
 
 header {
 	width: 100%;
-	height: 35px;
+	height: 50px;
 	position: fixed;
 	background-color: rgba(255, 255, 255, 0.20);
 	color: #fff;
 	z-index: 2;
 	display: inline-block;
-}
-
-header .header-logo {
-	color: #fff;
-	position: relative;
-	top: 7px;
-	left: 10px;
+  overflow: auto;
 }
 
 header .header-logo:hover{
@@ -24,16 +18,22 @@ header .header-logo:hover{
 	text-decoration: none;
 }
 
+header p{
+  display: inline-block;
+}
 
+.controls{
+  color: #eee;
+  position: relative;
+  overflow: auto;
+}
 
+.controls-right{
+  float: right;
+}
 
-/****************************\
-	HERO 
-\****************************/
-
-section.hero {
-	height: 200px;
-	background-color: purple;
+.controls-left{
+  float: left;
 }
 
 
@@ -56,18 +56,6 @@ body{
 
 body, button{
   font-family: 'Helvetica Neue', arial, sans-serif;
-}
-
-.controls{
-  padding: 2%;
-  background: #333;
-  color: #eee;
-  position: relative;
-  overflow: auto;
-}
-
-.controls-right{
-	float: right;
 }
 
 label{
@@ -115,6 +103,10 @@ button + label{
   width: 100%;
 }
 
+.mix:first-child{ /*fixes weird margin left*/
+  margin-left: -2%;
+}
+
 .container .mix,
 .container .gap{
   display: inline-block;
@@ -154,7 +146,7 @@ button + label{
 }
 
 #list-container {
-	padding: 10px 10px;
+	padding: 60px 10px 10px;
 }
 
 @media all and (min-width: 420px){

@@ -53,7 +53,7 @@ $(function(){
   });
 
   $('.sort').on('click', function(){ // changes button to asc and desc respectively
-    $('.sort').toggle();
+     $('.sort').toggle(); // changes button
   })
   
 });
