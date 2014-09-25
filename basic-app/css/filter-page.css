@@ -36,6 +36,9 @@ header p{
   float: left;
 }
 
+header input {
+  color: #000;
+}
 
 
 

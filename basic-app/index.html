@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" ng-app="trendrr" ng-controller="listCtrl">
+<html lang="en" ng-app="">
 
 <head>
 
@@ -63,13 +63,13 @@
             <header>
               <div class="controls">
 
-                <div class='controls-left'>
+                <div class='controls-left pad10'>
 
                   <a class="header-logo" href="#menu-toggle" id="menu-toggle">trendrr</a>
 
-                  <p>{{test}}</p>
+                  <input ng-model='search'>
+                  <p>{{search}}</p>
 
-                  <input>
                 </div>
 
                 <div class='controls-right'>
@@ -92,7 +92,7 @@
 
             <div id="list-container" class="container">
                 test
-                <div class="mix category-1" data-myorder=""></div>
+                <div class="mix category-1" data-myorder="{{search}}"></div>
                 <div class="mix category-1" data-myorder="2"></div>
                 <div class="mix category-1" data-myorder="3"></div>
                 <div class="mix category-2" data-myorder="4"></div>
