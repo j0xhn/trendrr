@@ -1,5 +1,3 @@
-var app = angular.module('trendrr');
-
-app.controller('listCtrl', function($scope, listService){
-	$scope.test = "test";
-});
+function listCtrl($scope) {
+	$scope.test = "Angular Is Working";	
+}
