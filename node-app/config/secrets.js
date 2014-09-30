@@ -1,5 +1,5 @@
 /**
- * This is secret info, make sure it is listed in .gitignore
+ * This is secret info, make sure it is listed in .gitignore - if this shows up then I need to remove it
  *  (this should be secret now)
  * You should never commit this file to a public repository on GitHub!
  * All public code on GitHub can be searched, that means anyone can see your

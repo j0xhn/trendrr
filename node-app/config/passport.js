@@ -1,3 +1,4 @@
+// this should be secret too
 var _ = require('lodash');
 var passport = require('passport');
 var InstagramStrategy = require('passport-instagram').Strategy;
