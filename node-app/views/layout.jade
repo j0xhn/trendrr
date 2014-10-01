@@ -7,15 +7,14 @@ html
     meta(name='description', content='')
     meta(name='csrf-token', content=_csrf)
     meta(name='author', content='')
-    title #{title} | Hackathon Starter
+    title #{title} | Trendrr
     != css('styles')
-  body
-    include partials/navbar
-
-    .container
-      include partials/flash
-      block content
-
+  body(ng-app='myApp')
+    #wrap
+      include partials/navbar
+      .container(data-ng-view)
+        include partials/flash
+        block content
     include partials/footer
 
     != js('application')
