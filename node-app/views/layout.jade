@@ -9,10 +9,10 @@ html
     meta(name='author', content='')
     title #{title} | Trendrr
     != css('styles')
-  body(ng-app='myApp')
+  body
     #wrap
       include partials/navbar
-      .container(data-ng-view)
+      .container
         include partials/flash
         block content
     include partials/footer

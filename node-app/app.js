@@ -23,9 +23,8 @@ var connectAssets = require('connect-assets');
 /**
  * Controllers (route handlers).
  */
+var appController = require('./controllers/app');
 
-var loginController = require('./controllers/login');
-var aboutController = require('./controllers/about');
 /**/
 var homeController = require('./controllers/home');
 var userController = require('./controllers/user');
@@ -116,15 +115,15 @@ app.use(function(req, res, next) {
 app.use(express.static(path.join(__dirname, 'public'), { maxAge: week }));
 
 /**
- * trendrr routes.
+ * trendrr routes
  */
-app.get('/about', aboutController.index);
+app.get('/', appController.index);
 
 /**
  * Main routes.
  */
 
-app.get('/', homeController.index);
+app.get('/landing', homeController.index);
 app.get('/login', userController.getLogin);
 app.post('/login', userController.postLogin);
 app.get('/logout', userController.logout);
