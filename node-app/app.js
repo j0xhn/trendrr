@@ -24,6 +24,7 @@ var connectAssets = require('connect-assets');
  * Controllers (route handlers).
  */
 
+var loginController = require('./controllers/login');
 var aboutController = require('./controllers/about');
 /**/
 var homeController = require('./controllers/home');
