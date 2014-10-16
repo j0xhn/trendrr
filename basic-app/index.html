@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" ng-app="" ng-controller="listCtrl">
+<html lang="en" ng-app="trendrr" ng-controller="listCtrl">
 
 <head>
 
@@ -97,7 +97,7 @@
 
             <div id="list-container" class="container">
                
-                <div class="mix category-1" data-myorder="1">
+                <!-- <div class="mix category-1" data-myorder="1">
                   <img src="https://lh4.googleusercontent.com/-loCqxpPn1a4/AAAAAAAAAAI/AAAAAAAAAAA/EOigQkOmC6I/s128-c-k/photo.jpg">
                   <div class="mix-info">
                     <p class="mix-title">
@@ -107,16 +107,28 @@
                     <div class="score-circle"><p>47</p> </div>
                   </div>
                   
+                </div> -->
+                <div ng-repeat="user in list" class="mix category-1" data-myorder="{{$index}}">
+                  <img ng-src="{{user.picture}}">
+                  
+                  <div class="mix-info">
+                    <p class="mix-title">
+                       {{user.fullName}}<br>
+                      <span><i class="fa fa-eye"></i> 3,309 &nbsp&nbsp&nbsp<i class="fa fa-comment-o"></i>    3,434</span>
+                    </p>
+                    <div class="score-circle"><p>{{$index}}</p> </div>
+                  </div>
+
                 </div>
 
-                <div class="mix category-1" data-myorder="2"></div>
+                <!-- <div class="mix category-1" data-myorder="2"></div>
                 <div class="mix category-1" data-myorder="3"></div>
                 <div class="mix category-2" data-myorder="4"></div>
                 <div class="mix category-1" data-myorder="5"></div>
                 <div class="mix category-1" data-myorder="6"></div>
                 <div class="mix category-2" data-myorder="7"></div>
                 <div class="mix category-2" data-myorder="8"></div>
-
+ -->
               <div class="gap"></div>
                 <div class="gap"></div>
             </div>
@@ -134,6 +146,8 @@
       <!-- Angular 1.2 -->
       <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular.min.js"></script>
       <!-- Controllers -->
+      <script src="js/app.js"></script>
+      <script src="js/Services/listService.js"></script>
       <script type="text/javascript" src="js/Controllers/listCtrl.js"></script>
       <!-- jQuery Version 1.11.0 -->
       <script src="js/jquery-1.11.0.js"></script>
