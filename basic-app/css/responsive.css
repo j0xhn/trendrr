@@ -1,0 +1,35 @@
+
+@media all and (min-width: 480px){ /* bootstrap xs */
+  .container .mix,
+  .container .gap{
+    width: 32%;
+    height: 142px;
+  }
+}
+
+@media all and (min-width: 700px){
+	.container .mix,
+	.container .gap{
+		width: 23.5%;
+		height: 156px;
+	}
+}
+
+@media all and (min-width: 768px){ /* bootstrap sm */
+  
+}
+
+@media all and (min-width: 992px){ /* bootstrap md */
+  .container .mix,
+  .container .gap{
+    width: 18.5%;
+    height: 181px;
+  }
+
+  @media all and (min-width: 1200px){ /* bootstrap lg */
+  .container .mix,
+  .container .gap{
+    width: 18.5%;
+    height: 219px;
+  }
+}

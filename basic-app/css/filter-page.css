@@ -53,10 +53,6 @@ header input {
   box-sizing: border-box;
 }
 
-body{
-  background: #68b8c4;
-}
-
 body, button{
   font-family: 'Helvetica Neue', arial, sans-serif;
 }
@@ -106,18 +102,14 @@ button + label{
   width: 100%;
 }
 
-.mix:first-child{ /*fixes weird margin left*/
-  margin-left: -2%;
-}
-
 .container .mix,
-.container .gap{
+.container .gap {
   display: inline-block;
   width: 49%;
   overflow: hidden;
 }
 
-.container .mix{
+.container .mix {
   text-align: left;
   background: #03899c;
   margin-bottom: 2%;
@@ -142,33 +134,14 @@ button + label{
   font-weight: 700;
 }
 
-.container .mix:before{
-  content: '';
-  display: inline-block;
-  padding-top: 60%;
-}
-
 #list-container {
 	padding: 60px 10px 10px;
 }
 
-@media all and (min-width: 420px){
-  .container .mix,
-  .container .gap{
-    width: 32%;
-  }
-}
 
-@media all and (min-width: 640px){
-  .container .mix,
-  .container .gap{
-    width: 23.5%;
-  }
-}
-
-/**
- * List Styles
- */
+/****************
+  #Container
+****************/
 
 .container.list .mix{
   width: 100%;
@@ -177,3 +150,62 @@ button + label{
 .container.list .mix:before{
   padding-top: 40px;
 }
+
+
+/****************
+  #Grid Mix Item
+****************/
+.grid .mix {
+  text-align: left;
+  overflow: hidden;
+  position: relative;
+  height: 130px;
+}
+
+.grid .mix-info {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  border: 1px solid #e5e5e5;
+  overflow: auto;
+  background-color: #ffffff;
+  padding: 5px;
+}
+
+.grid .mix p {
+  margin: 0;
+}
+
+.grid .mix-title {
+  float: left;
+  line-height: 15px;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: .5px;
+  color: #6b6b6b;
+}
+
+.grid .mix-title span {
+  font-size: 10px;
+  font-weight: 300;
+}
+.grid .mix img {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+}
+
+.grid .score-circle {
+  background-color: #f0b23a;
+  border-radius: 50%;
+  padding: 4px;
+  color: #ffffff;
+  font-weight: 500;
+  position: relative;
+  float: right;
+  height: 28px;
+  width: 28px;
+  padding: 4px 6px;
+  font-size: 14px;
+}
+

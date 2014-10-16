@@ -13,11 +13,13 @@
 
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
 
     <!-- Custom CSS -->
     <link href="css/simple-sidebar.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/filter-page.css">
     <link rel="stylesheet" type="text/css" href="css/shorthand.css">
+    <link rel="stylesheet" type="text/css" href="css/responsive.css">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -96,12 +98,18 @@
             <div id="list-container" class="container">
                
                 <div class="mix category-1" data-myorder="1">
-                   <img src="https://lh4.googleusercontent.com/-loCqxpPn1a4/AAAAAAAAAAI/AAAAAAAAAAA/EOigQkOmC6I/s128-c-k/photo.jpg">
-                  <h1>H1 TITLE</h1>
-          </div>
-                <div class="mix category-1" data-myorder="2">
+                  <img src="https://lh4.googleusercontent.com/-loCqxpPn1a4/AAAAAAAAAAI/AAAAAAAAAAA/EOigQkOmC6I/s128-c-k/photo.jpg">
+                  <div class="mix-info">
+                    <p class="mix-title">
+                      Bryson C. Hill <br>
+                      <span><i class="fa fa-eye"></i> 3,309 &nbsp&nbsp&nbsp<i class="fa fa-comment-o"></i>    3,434</span>
+                    </p>
+                    <div class="score-circle"><p>47</p> </div>
+                  </div>
                   
                 </div>
+
+                <div class="mix category-1" data-myorder="2"></div>
                 <div class="mix category-1" data-myorder="3"></div>
                 <div class="mix category-2" data-myorder="4"></div>
                 <div class="mix category-1" data-myorder="5"></div>
@@ -109,7 +117,7 @@
                 <div class="mix category-2" data-myorder="7"></div>
                 <div class="mix category-2" data-myorder="8"></div>
 
-                <div class="gap"></div>
+              <div class="gap"></div>
                 <div class="gap"></div>
             </div>
 
@@ -136,6 +144,8 @@
       <!-- custom javascripts -->
       <script src="http://cdn.jsdelivr.net/jquery.mixitup/latest/jquery.mixitup.min.js"></script>
       <script src="js/filter-page.js"></script>
+      <script src="js/variables.js"></script> 
+      <script src="js/main.js"></script>
 
       <!-- Menu Toggle Script -->
       <script>

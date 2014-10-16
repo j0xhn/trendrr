@@ -7,7 +7,13 @@
 
 $(function(){
 
-  var layout = 'list', // Store the current layout as a variable
+   if (window.innerWidth > 600){ // changes display on screen size
+      var layout = 'grid'
+   } else {
+      var layout = 'list'
+   };
+   
+   console.log(layout);
       $container = $('#list-container'), // Cache the MixItUp container
       $changeLayout = $('#ChangeLayout'); // Cache the changeLayout button
   
@@ -20,7 +26,7 @@ $(function(){
       effects: 'fade rotateX(-40deg) translateZ(-100px)'
     },
     layout: {
-      containerClass: 'list' // Add the class 'list' to the container on load
+      containerClass: layout // Add the class 'list' to the container on load
     }
   });
   
