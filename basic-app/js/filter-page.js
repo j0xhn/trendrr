@@ -6,8 +6,7 @@
  // any class we want and use it to affect the styling of our elements.
 
 $(function(){
- 
-   if (window.innerWidth > 600){ // changes display on screen size
+   if (window.innerWidth > 600px){ // changes display on screen size
       var layout = 'grid'
    } else {
       var layout = 'list'
@@ -19,18 +18,18 @@ $(function(){
       
   // Instantiate MixItUp with some custom options:
   
-  $container.mixItUp({
-    animation: {
-      animateChangeLayout: true, // Animate the positions of targets as the layout changes
-      animateResizeTargets: true, // Animate the width/height of targets as the layout changes
-      duration: 500,
-      effects: 'fade rotateZ(180deg) rotateX(180deg) scale(0.01)',
-      easing: 'cubic-bezier(0.645, 0.045, 0.355, 1)'
-    },
-    layout: {
-      containerClass: layout // Add the class 'list' to the container on load
-    }
-  });
+  // $container.mixItUp({
+  //   animation: {
+  //     animateChangeLayout: true, // Animate the positions of targets as the layout changes
+  //     animateResizeTargets: true, // Animate the width/height of targets as the layout changes
+  //     duration: 500,
+  //     effects: 'fade rotateZ(180deg) rotateX(180deg) scale(0.01)',
+  //     easing: 'cubic-bezier(0.645, 0.045, 0.355, 1)'
+  //   },
+  //   layout: {
+  //     containerClass: layout // Add the class 'list' to the container on load
+  //   }
+  // });
   
   // MixItUp does not provide a default "change layout" button, so we need to make our own and bind it with a click handler:
   

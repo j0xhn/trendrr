@@ -1,1 +1,1 @@
-var app = angular.module('trendrr', []);
+var app = angular.module('trendrr', ['ngRoute', 'onFinishRenderDirective']);
