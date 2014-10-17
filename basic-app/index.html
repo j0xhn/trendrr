@@ -95,7 +95,7 @@
 
 <!-- Page Content -->
 
-            <div id="list-container" class="container">
+            <div id="list-container" class="container" >
                
                 <!-- <div class="mix category-1" data-myorder="1">
                   <img src="https://lh4.googleusercontent.com/-loCqxpPn1a4/AAAAAAAAAAI/AAAAAAAAAAA/EOigQkOmC6I/s128-c-k/photo.jpg">
@@ -108,7 +108,7 @@
                   </div>
                   
                 </div> -->
-                <div ng-repeat="user in list" class="mix category-1" data-myorder="{{$index}}">
+                <div ng-repeat="user in list" class="mix category-1" data-myorder="{{$index}}" on-finish-render ng-cloak>
                   <img ng-src="{{user.picture}}">
                   
                   <div class="mix-info">
@@ -140,23 +140,33 @@
       </div> <!-- end of wrapper -->
 
 
-
+      <!-- jQuery Version 1.11.0 -->
+      <script src="js/jquery-1.11.0.js"></script>
 
 
       <!-- Angular 1.2 -->
-      <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular.min.js"></script>
-      <!-- Controllers -->
+      <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular.js"></script>
+      <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.0rc1/angular-route.js"></script>
+      <!-- Directives -->
+      <script type="text/javascript" src="js/Directives/onFinishRender.js"></script>
       <script src="js/app.js"></script>
-      <script src="js/Services/listService.js"></script>
+      <!-- Controllers -->
       <script type="text/javascript" src="js/Controllers/listCtrl.js"></script>
-      <!-- jQuery Version 1.11.0 -->
-      <script src="js/jquery-1.11.0.js"></script>
+      
+      <!-- Services -->
+      <script src="js/Services/listService.js"></script>
+
+
+
+
+
+
 
       <!-- Bootstrap Core JavaScript -->
       <script src="js/bootstrap.min.js"></script>
 
       <!-- custom javascripts -->
-      <script src="http://cdn.jsdelivr.net/jquery.mixitup/latest/jquery.mixitup.min.js"></script>
+      <script src="http://cdn.jsdelivr.net/jquery.mixitup/latest/jquery.mixitup.js"></script>
       <script src="js/filter-page.js"></script>
       <script src="js/variables.js"></script> 
       <script src="js/main.js"></script>
