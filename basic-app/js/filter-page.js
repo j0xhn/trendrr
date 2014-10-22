@@ -6,7 +6,7 @@
  // any class we want and use it to affect the styling of our elements.
 
 $(function(){
-   if (window.innerWidth > 600px){ // changes display on screen size
+   if (window.innerWidth > 600){ // changes display on screen size
       var layout = 'grid'
    } else {
       var layout = 'list'
