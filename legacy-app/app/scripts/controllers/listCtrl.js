@@ -38,6 +38,7 @@ $scope.commentCreate = function (threadFromView, selectedPerson, userID){
     if (userID) {
         var personRef = dbRef.child('/'+locationName+'/'+selectedPerson.id+'/comments/');
         personRef.push({'user': userID,'comment': threadFromView,'value':1});
+        comment.count++;
         $( '#commentCreateForm' ).each(function(){
         this.reset();
         });

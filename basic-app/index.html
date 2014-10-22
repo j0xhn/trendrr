@@ -96,27 +96,15 @@
 <!-- Page Content -->
 
             <div id="list-container" class="container" >
-               
-                <!-- <div class="mix category-1" data-myorder="1">
-                  <img src="https://lh4.googleusercontent.com/-loCqxpPn1a4/AAAAAAAAAAI/AAAAAAAAAAA/EOigQkOmC6I/s128-c-k/photo.jpg">
-                  <div class="mix-info">
-                    <p class="mix-title">
-                      Bryson C. Hill <br>
-                      <span><i class="fa fa-eye"></i> 3,309 &nbsp&nbsp&nbsp<i class="fa fa-comment-o"></i>    3,434</span>
-                    </p>
-                    <div class="score-circle"><p>47</p> </div>
-                  </div>
-                  
-                </div> -->
-                <div ng-repeat="user in list" class="mix category-1" data-myorder="{{$index}}" on-finish-render ng-cloak>
-                  <img ng-src="{{user.picture}}">
+                <div ng-repeat="item in list" class="mix category-1" data-myorder="{{$index}}" on-finish-render ng-cloak>
+                  <img ng-src="{{item.picture}}">
                   
                   <div class="mix-info">
                     <p class="mix-title">
-                       {{user.fullName}}<br>
-                      <span><i class="fa fa-eye"></i> 3,309 &nbsp&nbsp&nbsp<i class="fa fa-comment-o"></i>    3,434</span>
+                       {{item.fullName}}<br>
+                      <span><i class="fa fa-eye"></i> {{item.comments.keys(comments).lenth}} &nbsp&nbsp&nbsp<i class="fa fa-comment-o"></i>    3,434</span>
                     </p>
-                    <div class="score-circle"><p>{{$index}}</p> </div>
+                    <div class="score-circle"><p>{{item.overallVotes.value}}</p> </div>
                   </div>
 
                 </div>

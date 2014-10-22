@@ -105,7 +105,7 @@ button + label{
 .container .mix,
 .container .gap {
   display: inline-block;
-  width: 49%;
+  width: 48%;
   overflow: hidden;
 }
 
@@ -136,7 +136,6 @@ button + label{
 
 #list-container {
 	padding: 60px 10px 10px;
-  min-width: 1200px;
 }
 
 
@@ -161,7 +160,7 @@ button + label{
   overflow: hidden;
   position: relative;
   height: 130px;
-  margin: .5%;
+  margin: 1%;
 }
 
 .grid .mix-info {
