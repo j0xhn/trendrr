@@ -88,7 +88,7 @@ button + label{
 
 .container{
   padding: 0 0 0 0;
-  /*text-align: justify; commented out because initial load conflicting with filtered results*/ 
+  text-align: justify;
   font-size: 0.1px;
   width: 100%;
   
@@ -161,6 +161,7 @@ button + label{
   overflow: hidden;
   position: relative;
   height: 130px;
+  
 }
 
 .grid .mix-info {
