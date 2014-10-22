@@ -161,7 +161,6 @@ button + label{
   overflow: hidden;
   position: relative;
   height: 130px;
-  margin: .5%;
 }
 
 .grid .mix-info {

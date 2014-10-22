@@ -11,7 +11,7 @@ controller('listCtrl', function($scope, listService, onFinishRenderDirective) {
 	$scope.$on('ngRepeatFinished', function(ngRepeatFinishedEvent) {
 		console.log('finished ng-repeat on list')
 		$('#list-container').mixItUp({
-    animation: {
+      animation: {
       animateChangeLayout: true, // Animate the positions of targets as the layout changes
       animateResizeTargets: true, // Animate the width/height of targets as the layout changes
       duration: 500,
@@ -20,7 +20,8 @@ controller('listCtrl', function($scope, listService, onFinishRenderDirective) {
     },
     layout: {
       containerClass: 'grid' // Add the class 'list' to the container on load
-    }
-  });
-      });	
+      }
+    });
+    $('.list-item').after(' '); // fixes alignment
+  });	
 });
