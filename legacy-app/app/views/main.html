@@ -105,14 +105,14 @@
 <!-- Main List -->
   <ul id = 'makeCenter'>
 
-  <li class="item" ng-click="setPerson(person, 0)" ng-repeat="person in list | orderByPriority | orderBy:'overallVotes.value':true| orderBy:myOrder:myOrderReverse | filter: sortField : true | filter: search || property:'tags':search:undefined:true | limitTo: 100">
+  <li class="item" ng-click="setPerson(person, 0)" ng-repeat="item in list | orderByPriority | orderBy:'overallVotes.value':true| orderBy:myOrder:myOrderReverse | filter: sortField : true | filter: search || property:'tags':search:undefined:true | limitTo: 100">
     <div class="item-img-wrapper">
-     <img ng-src="{{person.picture}}" ng-mouseover='showOverall(person, $event)'> 
+     <img ng-src="{{item.image}}" ng-mouseover='showOverall(item, $event)'> 
    </div>
 
    <div class="item-info">
-    <p class="fl item-title">{{person.firstName}}</p>
-    <p class="orange-circle fr">{{person.overallVotes.value}}</p>
+    <p class="fl item-title">{{item.name}}</p>
+    <p class="orange-circle fr">{{item.overallVotes.value}}</p>
   </div> 
 </li>
 </ul>
@@ -216,7 +216,7 @@
 <!-- SIGNUP -->
 <!-- SUBMIT PROFILE -->
   <div class='signup'>
-   <a ng-click="callCreateModal($event)" id='createBtn'><h1>Nominate someone for Portland's top Real Estate Agents</h1></a>
+   <a ng-click="callCreateModal($event)" id='createBtn'><h1>Nominate a Startup</h1></a>
 <!-- testing for URL Parameters      {{param}} test -->
   </div>
   <script src='/scripts/main.js'></script>

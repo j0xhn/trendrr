@@ -3,24 +3,31 @@
     <div class="modal-content">
       <div class="modal-body">
         <i class="fa fa-times-circle icon_large" id='leaveModal' ng-click="cancelCreateModal()"></i>
-        <form name="nominateForm" ng-controller='LoginCtrl' class="" ng-submit="createUser(companyNameFromView, companyTagLineFromView, websiteFromView, companyLogoFromView, firstNameFromView, lastNameFromView, contactEmailFromView, contactPhoneFromView)" id='tagCreateForm'>
+        <form name="nominateForm" ng-controller='LoginCtrl' class="" ng-submit="createItem(itemNameFromView, itemTagLineFromView, itemWebsiteFromView, itemImageFromView, contactNameFromView, contactEmailFromView, contactPhoneFromView)">
 
             <h2>Nominate a Startup</h2>
             
-            <input class='col-xs-12' name="companyNameFromView" placeholder="Company Name" ng-model="companyNameFromView" required>
-            <input class='col-xs-12' name="companyTagLineFromView" placeholder="Tagline" ng-model="companyTagLineFromView" required>
-            <input class='col-xs-12' name="websiteFromView" placeholder="Website URL" ng-model="websiteFromView">
-            <input class='col-xs-12' name="companyLogoFromView" placeholder="Company Logo URL" ng-model="companyLogoFromView" required>
-            <input id='halfInput' name="firstNameFromView" placeholder="First Name" ng-model="firstNameFromView" required>
-            <input id='halfInput' name="lastNameFromView" placeholder="Last Name" ng-model="lastNameFromView" required>
+            <input class='col-xs-12' name="itemNameFromView" placeholder="Company Name" ng-model="itemNameFromView" required>
+
+            <input class='col-xs-12' name="itemTagLineFromView" placeholder="Tagline" ng-model="itemTagLineFromView" required>
+
+            <input class='col-xs-12' name="itemWebsiteFromView" placeholder="Website URL" ng-model="itemWebsiteFromView">
+
+            <input class='col-xs-12' name="itemImageFromView" placeholder="Company Logo URL" ng-model="itemImageFromView" required>
+
+            <input class='col-xs-12' name="contactNameFromView" placeholder="Contact Name" ng-model="contactNameFromView" required>
+
             <input class='col-xs-12' name="contactEmailFromView" placeholder="Contact Email" ng-model="contactEmailFromView" required>
+
             <input class='col-xs-12' name="contactPhoneFromView" placeholder="Contact Phone" ng-model="contactPhoneFromView">
             
             <span class="error" ng-show="nominateForm.input.$error.required">Required!</span><br>
 
+            <button type='submit'class='btn btn-xs' id='submitBtn'> Submit </button>
+
         </form>
           
-        <button type='submit'class='btn btn-xs' id='submitBtn'> Submit </button>
+        
 
       </div><!-- /. modal-body -->
     </div><!-- /.modal-content -->
