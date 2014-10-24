@@ -143,14 +143,14 @@ $scope.downVoteOverall = function (selectedPerson, userID) {
 ///////////////////////////
 // SET SELECTED PERSON INTO MODAL
 ///////////////////////////
-$scope.setPerson = function (person, fromModal) {
+$scope.setItem = function (item, fromModal) {
     isSelected = fromModal;
-	$scope.selectedPerson = person;
+	$scope.selectedItem = item;
     if(! isSelected){
         $("#modal").modal('show'); // hack (should use angular-strap or anguar-ui)
     }
-    console.log($scope.selectedPerson);
-    if($rootScope.userID == $scope.selectedPerson.id){
+    console.log($scope.selectedItem);
+    if($rootScope.userID == $scope.selectedItem.ownerID){
         console.log("it's a match!")
         //find bio & make it editable
          // $('#bio').replaceWith('<form id="bioCreate" ng-submit="bioCreate(bioFromView)"><textarea id="bio" maxlength="160" ng-model="bioFromView">'+ $scope.selectedPerson.bio +'</textarea><button type="submit" class="btn btn-xs tagBtns" id="submitBtnMinimal" >submit</button></form>')

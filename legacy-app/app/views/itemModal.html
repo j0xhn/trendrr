@@ -1,128 +1,9 @@
-
-<div class="top_nav">
-
-<!-- - - - - - 
-  #TOP LEFT 
-- - - - - - - -->
-  <div id="top_nav_left">
-    <img src="http://uvef.net/wp-content/uploads/2014/09/UVEF-Logo1.png" id="sidebar-toggle-left"/>
-    <div class='sidebar-open-left' id='left'>
-      <ul>
-        <input type='button' value='U P V O T E S' class="sideFilterButton" ng-click='setFilter({role: "Agent"})'></input>
-        <input type='button' value='S O C I A L' class="sideFilterButton" ng-click='setFilter({role: "Appraiser"})'></input>
-      </ul>
-    </div>
-  </div>
-
-
-
-<!-- LIST OWNER -->
-  <div class='input-group' id='location_nav'>
-    <h1>UVEF 100</h1>
-  </div>
-
-
-
-<!-- TOP SORT BUTTONS -->
-  <div class='sortButtons'>
-    <input type='button' value='U P V O T E S' class="filterButton" ng-click='setFilter({role: "Agent"})'></input>
-    <input type='button' value='S O C I A L' class="filterButton" ng-click='setFilter({role: "Appraiser"})'></input>
-  </div>
-
-
-
-
-
-
-
-<!-- - - - - - 
-  #TOP RIGHT 
-- - - - - - - -->
-  <div id='search_nav'>
-    <input type='search' ng-model='search' placeholder="&#xF002;">
-  </div>
-  <div id="top_nav_right">
-    <a ng-controller='LoginCtrl' ng-click="submitLogin($event)" id='loginBtn'>L O G I N</a><br>
-    <div id="profile_circle_profile">
-      <!-- makes selectedPerson same as user -->
-      <span><img ng-click="selectedPerson = list[userID]" src="{{ userPicture }}" id='sidebar-toggle-right'></span> 
-    </div>
-<!-- ACCOUNT INFO -->
-    <div class='sidebar-open-right' id='right'>
-      <h1>Edit Profile</h1>
-      <div id='editField'>
-        <h2>Role</h2>
-        <p editable-textarea="list[userID].role" e-rows='1' e-cols='60' e-maxlength="140">{{ list[userID].role }}</p>
-      </div>
-      <div id='editField'>
-        <h2>Bio</h2>
-        <p editable-textarea="list[userID].bio" e-rows='3' e-cols='60' e-maxlength="140">{{ list[userID].bio }}</p>
-      </div>
-      <div id='editField'>
-        <h2>Website</h2>
-        <p editable-text="list[userID].link">{{ list[userID].link }}</p>
-      </div>
-      <div id='editField'>
-        <h2>Picture Link</h2>
-        <p editable-text="list[userID].picture">{{ list[userID].picture }}</p>
-      </div>
-      <div id='editField'>
-        <h2>Searchable Tags</h2>
-      </div>
-        <div class='tagBox'>
-          <p ng-repeat="tag in list[userID].votes | object2Array | orderBy:'value':true">{{ tag.tagName }},&nbsp; </p>
-<!-- INPUT TAG -->
-          <form ng-submit="tagCreate(tagFromView, selectedPerson, userID)" id='tagCreateForm'>
-            <input class='tagName' type='text' name='tagFromView' placeholder='Create new tag' ng-model="tagFromView">
-            <button type='submit'class='btn btn-xs tagBtns' id='submitBtn' >create</button>
-          </form>
-        </div>
-    </div>
-  </div>
-</div>
-<br>
-
-
-
-
-
-<!-- Main Section -->
-<div class="col" id="center">
-<!-- Banner -->
-<section class='banner'>
-  <h1>Utah Valley's Hottest 100</h1>
-  <input class="hidden-xs mar30b" type='search' ng-model='search' placeholder="search criteria" autofocus>
-  <div class='actions'>
-    <button class='btn btn-default clear'>
-      <p>submit a friend</p>
-    </button>
-  </div>
-</section>
-
-
-
-
-<!-- Main List -->
-  <ul id = 'makeCenter'>
-
-  <li class="item" ng-click="setItem(item, 0)" ng-repeat="item in list | orderByPriority | orderBy:'overallVotes.value':true| orderBy:myOrder:myOrderReverse | filter: sortField : true | filter: search || property:'tags':search:undefined:true | limitTo: 100">
-    <div class="item-img-wrapper">
-     <img ng-src="{{item.image}}" ng-mouseover='showOverall(item, $event)'> 
-   </div>
-
-   <div class="item-info">
-    <p class="fl item-title">{{item.name}}</p>
-    <p class="orange-circle fr">{{item.overallVotes.value}}</p>
-  </div> 
-</li>
-</ul>
-
-  <div class='modal fade' id="modal">
+<div class='modal fade' id="modal" ng-controller='listCtrl'>
   <div class="modal-dialog">
     <div class="modal-content">
 <!-- MODAL HEADER -->
       <!-- <div class="modal-header">
-        <h4 class="modal-title">{{selectedItem.firstName}} {{selectedItem.lastName}} </h4>
+        <h4 class="modal-title">{{selectedPerson.firstName}} {{selectedPerson.lastName}} </h4>
       </div> -->
 <!-- LOGIN MODAL -->
       <div class="modal-login model-open-up" ng-controller='LoginCtrl' >
@@ -136,20 +17,20 @@
         <div class="entry" id="profile">
           <div class="col" id="center_left">
             <div id="profile_circle">
-              <img src="{{selectedItem.image}}">
+              <img src="{{selectedPerson.picture}}">
             </div>
-            <h1> {{selectedItem.name}}</h1>
-              <p id='bio'>{{ selectedItem.tagline }}</p>
+            <h1> {{selectedPerson.fullName}}</h1>
+              <p id='bio'>{{ selectedPerson.bio }}</p>
 <!-- OVERALL VOTE -->
             <div class='outerRank'>
               <ul>
                 <li id='tag'>
                   <div class='tagName' id='overallBar'>
-                    <progressbar class="progress-striped active" value=" selectedPerson.overallVotes.value " type="info"><i>{{ selectedItem.role }}</i></progressbar>
+                    <progressbar class="progress-striped active" value=" selectedPerson.overallVotes.value " type="info"><i>{{ selectedPerson.role }}</i></progressbar>
                   </div>
                   <div class='tagBtns'>
                     <button class='btn' id='buttonLeft' ng-click='downVoteOverall(selectedPerson, userID)'><span class="glyphicon glyphicon-chevron-left"></button>
-                    <h3>{{ selectedItem.overallVotes.value }}</h3>
+                    <h3>{{ selectedPerson.overallVotes.value }}</h3>
                     <button class='btn' id='buttonRight' ng-click='upVoteOverall(selectedPerson, userID)'><span class="glyphicon glyphicon-chevron-right"></button>
                   </div>
                 </li>
@@ -211,14 +92,3 @@
     </div><!-- /.modal-content -->
   </div><!-- /.modal-dialog -->
 </div><!-- /.modal -->
-<!-- CREATE -->
-  
-<!-- SIGNUP -->
-<!-- SUBMIT PROFILE -->
-  <div class='signup'>
-   <a ng-click="callCreateModal($event)" id='createBtn'><h1>Nominate a Startup</h1></a>
-<!-- testing for URL Parameters      {{param}} test -->
-  </div>
-  <script src='/scripts/main.js'></script>
-
-</div>
