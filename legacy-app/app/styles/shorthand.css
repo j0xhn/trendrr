@@ -130,6 +130,14 @@
 	.f22	{ font-size: 22px !important; }
 	.f26	{ font-size: 26px !important; }
 
+	.f700 	{ font-weight: 700 !important; }
+
+	.txt-orange { color: #f0b23a !important; }
+	.txt-grey 	{ color: #555555 !important; }
+
+	.txt-museo 	{ font-family: 'Open Sans','Helvetica'; }
+	.txt-georgia	{ font-family: 'Georgia', 'Times New Roman'; }
+
 
 
 

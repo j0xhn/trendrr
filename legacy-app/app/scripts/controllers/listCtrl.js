@@ -2,11 +2,13 @@
 // ? this code repeats 3 times... why ?
 angular.module('100App')
   .controller('listCtrl', function ($scope, $rootScope, $firebase, $modal, listService, $filter, $stateParams) {
-///////////////////////////
-// MAKE SCOPE VARIABLES
-///////////////////////////
+
+/* - - - - - - - - - - - - - - - - - - *\
+    #SCOPE VARIABLES
+\* - - - - - - - - - - - - - - - - - - */
 // list
 var list = listService.getList();
+console.log(list);
 var isSelected = 0;
 list.$bind($scope, 'list');
 $scope.$watch('list', function(list) {
@@ -15,25 +17,29 @@ $scope.$watch('list', function(list) {
         $scope.selectedPerson = list[$scope.selectedPerson.id]
     }
 }, true)
-//location
-var locationName = listService.getLocationName();
-$scope.locationName = locationName;
+// database
 var dbRef = new Firebase('https://top100.firebaseio.com');
+// location
+$scope.locationName = listService.getLocationName();
 //param
 $scope.param = $stateParams;
-console.log($scope.param);
-//login prompt
+// login prompt
 $scope.loginPrompt = function(){
     listService.loginPrompt();
 }
-//setting filter with an object
+// setting filter with an object
 $scope.setFilter = function(value){
     console.log(value);
     $scope.sortField = value;
 }
-///////////////////////////
-// COMMENTS
-///////////////////////////
+
+
+
+
+
+/* - - - - - - - - - - - - - - - - - - *\
+    #COMMENTS
+\* - - - - - - - - - - - - - - - - - - */
 $scope.commentCreate = function (threadFromView, selectedPerson, userID){
     if (userID) {
         var personRef = dbRef.child('/'+locationName+'/'+selectedPerson.id+'/comments/');
@@ -91,9 +97,18 @@ $scope.downVoteComment = function (comment, selectedPerson, userID) {
         listService.loginPrompt();
     }
 }
-///////////////////////////
-// CHANGE OVERALL SCORE ON CLICK
-///////////////////////////
+
+
+
+
+
+/* - - - - - - - - - - - - - - - - - - *\
+    #OVERALL SCORE
+\* - - - - - - - - - - - - - - - - - - */
+$scope.showOverall = function (person, $event) {
+    $('.showOverall').hide();
+    $($event.target).nextAll('.showOverall').show();
+};
 $scope.upVoteOverall = function (selectedPerson, userID, fromMain) {
     console.log('fromMain', fromMain);
     //sets that it was up vote from Main View
@@ -140,21 +155,19 @@ $scope.downVoteOverall = function (selectedPerson, userID) {
         listService.loginPrompt();
     }
 }
-///////////////////////////
-// SET SELECTED PERSON INTO MODAL
-///////////////////////////
-$scope.setPerson = function (person, fromModal) {
+
+
+
+
+
+/* - - - - - - - - - - - - - - - - - - *\
+    #SET SELECTED ITEM
+\* - - - - - - - - - - - - - - - - - - */
+$scope.setItem = function (item, fromModal) {
     isSelected = fromModal;
-	$scope.selectedPerson = person;
+	$scope.selectedItem = item;
     if(! isSelected){
         $("#modal").modal('show'); // hack (should use angular-strap or anguar-ui)
-    }
-    console.log($scope.selectedPerson);
-    if($rootScope.userID == $scope.selectedPerson.id){
-        console.log("it's a match!")
-        //find bio & make it editable
-         // $('#bio').replaceWith('<form id="bioCreate" ng-submit="bioCreate(bioFromView)"><textarea id="bio" maxlength="160" ng-model="bioFromView">'+ $scope.selectedPerson.bio +'</textarea><button type="submit" class="btn btn-xs tagBtns" id="submitBtnMinimal" >submit</button></form>')
-    // $('#bio').replaceWith( '{{selectedPerson.bio}}' )
     }
 };
 $scope.bioCreate = function(bioFromView){
@@ -166,9 +179,14 @@ $scope.cancel = function(){
    $("#modal").modal('hide');
 }
 
-///////////////////////////
-// createModal 
-///////////////////////////
+
+
+
+
+
+/* - - - - - - - - - - - - - - - - - - *\
+    #CREATE MODAL CREATION AND DISMISS
+\* - - - - - - - - - - - - - - - - - - */
 $scope.callCreateModal = function (e) {
    console.log('you called Create Modal');
     $("#createModal").modal('show'); // hack (should use angular-strap or anguar-ui)
@@ -177,16 +195,14 @@ $scope.cancelCreateModal = function(e){
     console.log('you clicked to cancel');
    $("#createModal").modal('hide');
 }
-///////////////////////////
-// SHOW OVERALL SCORE
-///////////////////////////
-$scope.showOverall = function (person, $event) {
-    $('.showOverall').hide();
-    $($event.target).nextAll('.showOverall').show();
-};
-///////////////////////////
-// TAGS
-///////////////////////////
+
+
+
+
+
+/* - - - - - - - - - - - - - - - - - - *\
+    #TAGS
+\* - - - - - - - - - - - - - - - - - - */
 $scope.tagCreate = function (tagName, selectedPerson, userID){
     if (userID) {
         var tagName = angular.lowercase(tagName);
