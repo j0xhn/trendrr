@@ -151,15 +151,15 @@
             
 
             <!-- OVERALL VOTE -->
+
             <div class='outerRank'>
               <ul>
                 <li id='tag'>
                   <div class='tagName' id='overallBar'>
-                    <progressbar class="progress-striped active" value=" selectedPerson.overallVotes.value " type="info"><i>{{ selectedPerson.role }}</i></progressbar>
+                    <progressbar class="progress-striped active" value=" selectedPerson.overallVotes.value " type="info"><i>{{ selectedItem.role }}</i></progressbar>
                   </div>
                   <div class='tagBtns'>
                     <button class='btn' id='buttonLeft' ng-click='downVoteOverall(selectedPerson, userID)'><span class="glyphicon glyphicon-chevron-left"></button>
-                    <h3></h3>
                     <button class='btn' id='buttonRight' ng-click='upVoteOverall(selectedPerson, userID)'><span class="glyphicon glyphicon-chevron-right"></button>
                   </div>
                 </li>

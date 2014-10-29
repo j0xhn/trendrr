@@ -43,6 +43,19 @@ angular.module('100App', [
         // }
       };
 
+  var itemModal = {
+        templateUrl: 'views/itemModal.html',
+        controller: 'listCtrl',
+        // resolve: {
+        //   user: function (userService) {
+        //     return userService.get();
+        //   },
+        //   loggedInUser: function (userService) {
+        //     return userService.getLoggedInUser();
+        //   }
+        // }
+      };
+
   var body = {
         templateUrl: 'views/main.html',
         controller: 'listCtrl',

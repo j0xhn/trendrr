@@ -15,7 +15,7 @@ return {
         return $firebase(ref);
     },
     getLocationName: function(){
-        return 'Provo';
+        return 'uvef';
     },
 
     loginPrompt: function(){
