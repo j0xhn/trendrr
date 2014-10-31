@@ -586,29 +586,6 @@ opacity: .7;
 
 
 
-/* - - - - - - - - - - - - *\
-  #ITEM MODAL
-\* - - - - - - - - - - - - */
-.item-modal {
-  margin: 0 auto;
-}
-
-p.overall-score{
-  font-size: 50px;
-  float: left;
-  color: ;
-}
-.item-image-wrapper {
-  overflow: hidden;
-  height: 160px;
-  margin-bottom: 20px;
-}
-
-.item-image-wrapper img{
-  width: 100%;
-}
-
-
 #profile_circle_profile{
   height: 0px;
 }
@@ -978,12 +955,93 @@ figure {
 
 /*End of Grid CSS*/
 
-/****************
-  #Sections
-****************/
+/* - - - - - - - - - - - - *\
+  #GENERAL
+\* - - - - - - - - - - - - */
 section {
   overflow: auto;
 }
+
+
+
+
+/* - - - - - - - - - - - - *\
+  #ELEMENTS
+\* - - - - - - - - - - - - */
+button {
+  border: none;
+  height: 46px;
+  font-size: 20px;
+}
+
+button:focus {
+  outline:none;
+}
+
+.word-divider {
+  border-top: 1px solid #e5e5e5;
+  height: 1px;
+  margin: 0 auto;
+  margin: 25px 0;
+  text-align: center;
+}
+
+.word-divider>span {
+  font-weight: 500;
+  color: #999;
+  font-size: 15px;
+  position: relative;
+  top: -9px;
+  padding: 0 30px;
+  background-color: #fff;
+}
+
+
+
+
+
+/* - - - - - - - - - - - - *\
+  #ITEM MODAL
+\* - - - - - - - - - - - - */
+.item-modal {
+  margin: 0 auto;
+}
+
+.item-modal {
+  width: 100%;
+}
+
+.item-modal section {
+  padding-bottom: 20px;
+}
+
+.item-modal i.inline {
+  font-size: 18px;
+  color: #999999;
+}
+
+p.overall-score{
+  font-size: 50px;
+  float: left;
+}
+.item-image-wrapper {
+  overflow: hidden;
+  height: 160px;
+  margin-bottom: 20px;
+}
+
+.item-modal img{
+  width: 100%;
+}
+
+.item-modal-social-icons {
+  text-align: center;
+}
+
+.item-modal-social-icons i {
+  font-size: 1
+}
+
 
 
 

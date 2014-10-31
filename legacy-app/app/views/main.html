@@ -13,9 +13,8 @@
       </ul>
     </div>
   </div>
-
-
-
+  
+      
 <!-- LIST OWNER -->
   <div class='input-group' id='location_nav'>
     <h1>UVEF 100</h1>
@@ -138,25 +137,46 @@
 <!-- MODAL BODY -->
       <div class="modal-body model-open-up">
         <i class="fa fa-times-circle icon_large" id='leaveModal' ng-click="cancel()"></i>
-
+          
         <div class="item-modal">
-            <div class="item-image-wrapper">
+          <section>
               <img src="{{ selectedItem.image }}">
+          </section>
+
+          <section class="pad10b">
+
+            <div class="item-modal-info">
+              <h1><span class="txt-orange f700 center">{{ selectedItem.overallVotes.value }}</span>&nbsp;<i class="fa fa-bolt f18 txt-lightgray"></i>&nbsp;{{ selectedItem.name }}</h1>
+              <p class="pad20b">{{ selectedItem.tagline }}</p>
+              <button class="btn-block bg-blue txt-white" ng-click='upVoteOverall(selectedItem, userID)'>UP VOTE</button>
             </div>
 
-            <div class="item-info-wrapper">
-              <h1> <span class="txt-orange f700">{{ selectedItem.overallVotes.value }}</span> {{ selectedItem.name }}</h1>
-              <p id='bio'>{{ selectedItem.tagline }}</p>
+          </section>
+
+          <div class="word-divider">
+            <span>social</span>
+          </div>
+
+          <section class="row item-modal-social-icons">
+            <div class="col-xs-6">
+              <i class="fa fa-facebook-square f18 txt-lightgray opacity7"><span class="txt-orange f700">&nbsp;{{ selectedItem.social.facebookScore }}</span></i>
             </div>
-            
+            <div class="col-xs-6">
+              <i class="fa fa-twitter-square f18 txt-lightgray opacity7"><span class="txt-orange f700">&nbsp;{{ selectedItem.social.twitterScore }}</i>
+            </div>
+          </section>
 
-            <!-- OVERALL VOTE -->
+          <div>
+          </div>
 
-            <div class='outerRank'>
-              <ul>
-                <li id='tag'>
-                  <div class='tagName' id='overallBar'>
-                    <progressbar class="progress-striped active" value=" selectedPerson.overallVotes.value " type="info"><i>{{ selectedItem.role }}</i></progressbar>
+          
+          <!-- OVERALL VOTE -->
+
+          <div class='outerRank'>
+            <ul>
+              <li id='tag'>
+                <div class='tagName' id='overallBar'>
+                  <progressbar class="progress-striped active" value=" selectedPerson.overallVotes.value " type="info"><i>{{ selectedItem.role }}</i></progressbar>
                   </div>
                   <div class='tagBtns'>
                     <button class='btn' id='buttonLeft' ng-click='downVoteOverall(selectedPerson, userID)'><span class="glyphicon glyphicon-chevron-left"></button>
