@@ -1,7 +1,7 @@
 'use strict';
 // ? this code repeats 3 times... why ?
 angular.module('100App')
-  .controller('listCtrl', function ($scope, $rootScope, $firebase, $modal, listService, $filter, $stateParams) {
+  .controller('listCtrl', function ($scope, $rootScope, $firebase, $modal, listService, $filter, $stateParams, onFinishRenderDirective) {
 
 /* - - - - - - - - - - - - - - - - - - *\
     #SCOPE VARIABLES
@@ -271,4 +271,21 @@ $scope.downVote = function (tagName, selectedPerson, userID, $filter) {
         listService.loginPrompt();
     }
 }
+
+
+
+/* - - - - - - - - - - - - - - - - - - *\
+    #NG-REPEAT RENDER FINISHED
+\* - - - - - - - - - - - - - - - - - - */
+    $scope.$on('ngRepeatFinished', function(ngRepeatFinishedEvent) {
+        // HACK - removes empty block on links
+       $('.item-modal .additional-links li:first-child').remove();  
+    });
+
+
 });
+
+
+
+
+  

@@ -251,6 +251,8 @@ span:focus {
   outline: none;
 }
 
+
+
 .tagBox {
   text-align: left;
   margin: 0 0 20px 0;
@@ -838,10 +840,10 @@ input[type="radio"]:checked + label {
 }
 
 a {
-  text-decoration: none;
   color: #3CB5DB;
-  font-style: bold;
-  font-weight: 700;
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: .5px;
 }
 
 span {
@@ -1209,7 +1211,6 @@ figure {
 
 .isotope .isotope-item {
   transition-duration: 0.8s;
-  transition-property: -webkit-transform, opacity;
   transition-property: transform, opacity;
 }
 
@@ -1226,6 +1227,12 @@ section {
 /* - - - - - - - - - - - - *\
   #ELEMENTS
 \* - - - - - - - - - - - - */
+
+p {
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: .5px;
+}
 
 button {
   border: none;
@@ -1299,6 +1306,25 @@ p.overall-score {
   font-size: 1;
 }
 
+.item-modal .additional-links ul {
+  padding-left: 0;
+  list-style: none;
+}
+
+.item-modal .additional-links li {
+  display: inline-block;
+  margin-right: 5px;
+  font-size: 15px;
+  font-size: 1.5rem;
+}
+
+.item-modal .additional-links li a {
+  display: inline-block;
+  text-decoration: none;
+  padding: 4px 11px;
+  border: 1px solid;
+}
+
 /****************
   #Item
 ****************/
@@ -1311,6 +1337,21 @@ p.overall-score {
   margin: 5px;
 }
 
+.item:after {
+  content: "";
+  width: 124px;
+  text-align: left;
+  display: inline-block;
+  overflow: hidden;
+  text-align: center;
+  position: absolute;
+  z-index: -1;
+  opacity: .6;
+  margin-top: -4px;
+  margin-left: 7px;
+  box-shadow: 0px 0px 8px 2px #000000;
+}
+
 .item-info {
   position: relative;
   padding: 5px;
@@ -1318,12 +1359,6 @@ p.overall-score {
   overflow: auto;
   margin-top: -2px;
   background-color: #ffffff;
-}
-
-.item-title {
-  font-size: 13px;
-  line-height: 17px;
-  font-weight: 500px;
 }
 
 .item img {
