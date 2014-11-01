@@ -1,0 +1,222 @@
+/****************************\
+	HEADER
+\****************************/
+
+header {
+	width: 100%;
+	height: 50px;
+	position: fixed;
+	background-color: rgba(255, 255, 255, 0.20);
+	color: #fff;
+	z-index: 2;
+	display: inline-block;
+  overflow: auto;
+}
+
+header .header-logo:hover{
+	color: #fff;
+	text-decoration: none;
+}
+
+header p{
+  display: inline-block;
+}
+
+.controls{
+  color: #eee;
+  position: relative;
+  overflow: auto;
+}
+
+.controls-right{
+  float: right;
+}
+
+.controls-left{
+  float: left;
+}
+
+header input {
+  color: #000;
+}
+
+
+
+
+/****************************\
+	MixitUP Section 
+\****************************/
+
+*{
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body, button{
+  font-family: 'Helvetica Neue', arial, sans-serif;
+}
+
+label{
+  font-weight: 300;
+  margin: 0 .4em 0 0;
+}
+
+button{
+  display: inline-block;
+  padding: .4em .8em;
+  background: #666;
+  border: 0;
+  color: #ddd;
+  font-size: 16px;
+  font-weight: 300;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button.active{
+  background: #68b8c4;
+}
+
+button:focus{
+  outline: 0 none;
+}
+
+button + label{
+  margin-left: 1em;
+}
+
+.container{
+  padding: 0 0 0 0;
+  /*text-align: justify; commented out because initial load conflicting with filtered results*/ 
+  font-size: 0.1px;
+  width: 100%;
+  
+  -webkit-transform: translateZ(0);
+  -webkit-backface-visibility: hidden;
+}
+
+.container:after{
+  content: '';
+  display: inline-block;
+  width: 100%;
+}
+
+.container .mix,
+.container .gap {
+  display: inline-block;
+  width: 48%;
+  overflow: hidden;
+}
+
+.container .mix {
+  text-align: left;
+  background: #03899c;
+  margin-bottom: 15px;
+  display: none;
+}
+
+.container .mix.category-1{
+  border-top: 2px solid limegreen;
+}
+
+.container .mix.category-2{
+  border-top: 2px solid yellow;
+}
+
+.container .mix:after{
+  content: attr(data-myorder);
+  color: white;
+  font-size: 16px;
+  display: inline-block;
+  vertical-align: top;
+  padding: 4% 6%;
+  font-weight: 700;
+}
+
+#list-container {
+	padding: 60px 10px 10px;
+}
+
+
+/****************
+  #Container
+****************/
+
+.container.list .mix{
+  width: 100%;
+}
+
+.container.list .mix:before{
+  padding-top: 40px;
+}
+
+
+/****************
+  #Grid Mix Item
+****************/
+.grid .mix {
+  text-align: left;
+  overflow: hidden;
+  position: relative;
+  height: 130px;
+  margin: 1%;
+}
+
+.grid .mix-info {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  border: 1px solid #e5e5e5;
+  overflow: auto;
+  background-color: #ffffff;
+  padding: 5px;
+}
+
+.grid .mix p {
+  margin: 0;
+}
+
+.grid .mix-title {
+  float: left;
+  line-height: 15px;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: .5px;
+  color: #6b6b6b;
+}
+
+.grid .mix-title span {
+  font-size: 10px;
+  font-weight: 300;
+}
+.grid .mix img {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+}
+
+.grid .score-circle {
+  background-color: #f0b23a;
+  border-radius: 50%;
+  padding: 4px;
+  color: #ffffff;
+  font-weight: 500;
+  position: relative;
+  float: right;
+  height: 28px;
+  width: 28px;
+  padding: 4px 6px;
+  font-size: 14px;
+}
+
+.footer {
+z-index:1000;
+font-size:11px;
+position: fixed;
+width:100%;
+left:0px;
+bottom:0px;
+background-color: #333333;
+padding:6px 20px 2px 20px;
+}
