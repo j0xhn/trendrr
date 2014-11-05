@@ -89,7 +89,7 @@ button + label{
 
 .container .mix {
   text-align: left;
-  /*background: #03899c*/;
+  /*background: #03899c;*/
   margin-bottom: 15px;
   display: none;
 }
@@ -452,6 +452,7 @@ button + label{
     width: 18%;
     height: 181px;
   }
+}
 
   @media all and (min-width: 1200px){ /* bootstrap lg */
   .container .mix,
