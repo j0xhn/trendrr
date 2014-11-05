@@ -2,6 +2,7 @@ trendrr
 =======
 
 Things to do:
+
 1) Finish Modal - comments, upvote, downvote, social share.
 
 2) Signup Modal - add places for link name, link user with the their submited Startup on side-bar, and styling
