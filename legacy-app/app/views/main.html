@@ -102,18 +102,82 @@
 
 
 <!-- Main List -->
-  <ul id = 'makeCenter'>
+<ul id = 'makeCenter'>
 
   <li class="item" ng-click="setItem(item, 0)" ng-repeat="item in list | orderByPriority | orderBy:'overallVotes.value':true| orderBy:myOrder:myOrderReverse | filter: sortField : true | filter: search || property:'tags':search:undefined:true | limitTo: 100">
     <img ng-src="{{item.image}}" ng-mouseover='showOverall(item, $event)'> 
 
-   <div class="item-info">
-    <p class="fr txt-primary f700">{{item.overallVotes.value}}</p>
-    <p class="fl item-title">{{item.name}}</p>
+    <div class="item-info">
+      <p class="fr txt-primary f700">{{item.overallVotes.value}}</p>
+      <p class="fl item-title">{{item.name}}</p>
    
-  </div> 
-</li>
+    </div> 
+  </li>
 </ul>
+
+<div id="list-container" class="container" >
+    <div class="mix category-1 card post item" data-myorder="{{$index}}" ng-click="setItem(item, 0)" ng-repeat="item in list | orderBy:'overallVotes.value':true| orderBy:myOrder:myOrderReverse | filter: sortField : true | filter: search || property:'tags':search:undefined:true | limitTo: 100" on-finish-render ng-cloak >
+        <div class="col-sm-3 hidden-xs noPadding-left">
+            <div class="chart mix-info item-info">
+                <p class="ng-binding">
+                    {{item.overallVotes.value}}
+                    
+                </p>
+            </div>
+
+            <div class="pagePreview">
+                <a class="ng-binding" target="_blank"><img alt="" ng-src="{{item.picture}}" class=
+                "img-responsive img-mobile" style = "min-width 189px; min-height: 189px; max-width 189px; max-height: 189px" src="{{item.picture}}"></a>
+            </div>
+        </div>
+
+        <div class="col-xs-8 col-sm-6 col-lg-7">
+            <h2><a target="_blank" class="ng-binding mix-title">{{item.fullName}}</a></h2>
+
+            <h4 class="ng-binding">{{item.bio}}</h4>
+            <a class="tweet-this-button btn btn-primary" ng-href="https://twitter.com/intent/tweet?url=https://productbuzz.co&amp;via=productbuzzHQ&amp;hashtags=redditmade&amp;text=redditmade - Crowdfunding projects backed by Reddit community - Buzz: 2472 on" href="https://twitter.com/intent/tweet?url=https://productbuzz.co&amp;via=productbuzzHQ&amp;hashtags=redditmade&amp;text=redditmade - Crowdfunding projects backed by Reddit community - Buzz: 2472 on">share the buzz</a>
+        </div>
+
+        <div class="col-xs-4 col-sm-3 col-lg-2 offsetTop">
+            <p class="text-left buzz showUpdate ng-binding"><img alt=""
+            class="img-responsive rating img-mobile" src=
+            "images/bee.png"> {{post.buzz}}{{$index+25}}</p>
+
+            <p class="text-left hot showUpdate ng-binding"><img alt=""
+            class="img-responsive rating trend img-mobile" src=
+            "images/fire.png">
+            {{post.buzz/(post.alive/60/60) | number:0}}{{$index+37}}°</p>
+
+            <p class="text-left votes showUpdate ng-binding"><img alt=""
+            class="img-responsive rating thumb img-mobile" src=
+            "images/thumbs.png"> {{post.votes}}{{$index+75}}</p>
+        </div>
+    </div>
+</div>
+<script src="../scripts/filter-page.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
