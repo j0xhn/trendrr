@@ -18,10 +18,7 @@ html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abb
 #halfInput + #halfInput{
   margin-left: 4%;
 }
-.modal input{
-  line-height: 14px;
-  padding: 2px 5px;
-}
+
 .createModal input {
   margin-bottom: 12px;
   line-height: 24px;
@@ -96,10 +93,7 @@ span:focus{
   opacity: .5;
   display: none;
 }
-.commentSection{
-  height: 363px;
-  overflow-y: auto;
-}
+
 .btn:focus{
   opacity: 1;
   outline: none;
@@ -140,9 +134,9 @@ span:focus{
   margin: 20px 0;
 }
 #submitBtn {
-  background: #73C9E3;
   color: white;
   text-shadow: 1px 1.5px 2px rgb(95, 86, 86);
+  height: 34px;
 }
 #submitBtnMinimal{
   background: transparent;
@@ -628,7 +622,6 @@ cursor: hand;
 background-color: lightslategray;
 }
 
-
 a {
 	color:#3CB5DB;
   font-size: 12px;
@@ -747,13 +740,14 @@ h3 {
   cursor: pointer;
   top: -47px;
 }
-#leaveModal{
+.leaveModal{
   position: absolute;
-  top: 6px;
-  right: 6px;
-  opacity: .1;
+  top: 4px;
+  right: 5px;
+  opacity: .4;
+  font-size: 19px;
 }
-#leaveModal:hover{
+.leaveModal:hover{
   opacity: .5;
   cursor: pointer;
 }
@@ -1035,7 +1029,7 @@ p.overall-score{
   margin-bottom: 20px;
 }
 
-.item-modal img{
+.item-modal .main-image {
   width: 100%;
 }
 
@@ -1064,6 +1058,27 @@ p.overall-score{
   text-decoration: none;
   padding: 4px 11px;
   border: 1px solid;
+  color: #999999;
+}
+
+.item-modal .additional-links li a:hover {
+  color: white;
+  background-color: #4db8f6;
+}
+
+.item-modal .comment-box{
+  overflow-y: auto;
+}
+
+.item-modal .comment-box img {
+  width: 34px;
+  float: left;
+  margin-right: 10px;
+  border-radius: 3px;
+}
+.item-modal input {
+  line-height: 22px;
+  padding: 0px 10px;
 }
 
 
@@ -1082,6 +1097,7 @@ p.overall-score{
   display: inline-block;
   overflow: hidden;
   margin: 5px;
+  cursor: pointer;
 }
 
 .item:after {

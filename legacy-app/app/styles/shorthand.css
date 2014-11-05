@@ -42,6 +42,8 @@
 	.pad40r 	{ padding-right: 40px !important; }
 
 	.mar0		{ margin: 0 !important; }
+	.mar0t 		{ margin-top: 0 !important; }
+	.mar5t 		{ margin-top: 5px !important; }
 	.mara		{ margin-left: auto !important; margin-right: auto !important;}
 	.mar10 		{ margin: 10px !important; }
 	.mar10tb 	{ margin-top: 10px !important; margin-bottom: 10px !important; }

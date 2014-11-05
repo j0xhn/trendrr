@@ -205,3 +205,14 @@ button + label {
   padding: 4px 6px;
   font-size: 14px;
 }
+
+.footer {
+  z-index: 1000;
+  font-size: 11px;
+  position: fixed;
+  width: 100%;
+  left: 0px;
+  bottom: 0px;
+  background-color: #333333;
+  padding: 6px 20px 2px 20px;
+}

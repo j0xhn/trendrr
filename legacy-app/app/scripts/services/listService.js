@@ -10,12 +10,12 @@ return {
         return $firebase(ref);
 
     },
+    getListName: function(){ //needs to be matching what's in getList
+        return 'uvef';
+    },
     getUsers: function () {
         var ref = new Firebase(FBURL + 'users');
         return $firebase(ref);
-    },
-    getLocationName: function(){
-        return 'uvef';
     },
 
     loginPrompt: function(){

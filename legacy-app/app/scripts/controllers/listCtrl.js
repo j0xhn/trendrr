@@ -20,7 +20,8 @@ $scope.$watch('list', function(list) {
 // database
 var dbRef = new Firebase('https://top100.firebaseio.com');
 // location
-$scope.locationName = listService.getLocationName();
+var listName = listService.getListName();
+$scope.listName = listName;
 //param
 $scope.param = $stateParams;
 // login prompt
@@ -40,11 +41,11 @@ $scope.setFilter = function(value){
 /* - - - - - - - - - - - - - - - - - - *\
     #COMMENTS
 \* - - - - - - - - - - - - - - - - - - */
-$scope.commentCreate = function (threadFromView, selectedPerson, userID){
+$scope.commentCreate = function (threadFromView, selectedItem, userID){
     if (userID) {
-        var personRef = dbRef.child('/'+locationName+'/'+selectedPerson.id+'/comments/');
-        personRef.push({'user': userID,'comment': threadFromView,'value':1});
-        comment.count++;
+        var itemRef = dbRef.child('/'+listName+'/'+selectedItem.guid+'/comments/');
+        itemRef.push({'user': userID,'comment': threadFromView,'value':1});
+        itemRef.commentCount++;
         $( '#commentCreateForm' ).each(function(){
         this.reset();
         });

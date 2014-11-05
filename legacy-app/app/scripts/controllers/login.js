@@ -39,8 +39,8 @@ angular.module('100App')
             'value':50
          }, 
          "comments": {
-            'count':0
-        }
+        },
+        "commentCount":0,
       });
     }
 

@@ -135,11 +135,11 @@
 
 <!-- MODAL BODY -->
       <div class="modal-body model-open-up">
-        <i class="fa fa-times-circle icon_large" id='leaveModal' ng-click="cancel()"></i>
+        <i class="leaveModal" ng-click="cancel()">x</i>
           
         <div class="item-modal">
           <section>
-              <img src="{{ selectedItem.image }}">
+              <img class="main-image" src="{{ selectedItem.image }}">
           </section>
 
           <section class="pad10b">
@@ -168,16 +168,44 @@
             </div>
           </section>
 
+
+
+          <div class="word-divider mar5t">
+            <span>links & commentary</span>
+          </div>
+
           <section>
            <ul class="additional-links">
             <li ng-repeat="link in selectedItem.social.additionalLinks | object2Array" on-finish-render>
-              <a class="border-primary txt-grayLight" href="{{ link.link }}" target="_blank"> {{ link.name }} </a>
+              <a class="border-primary" href="{{ link.link }}" target="_blank"> {{ link.name }} </a>
             </li>
           </ul>
         </section>
         
 
-          <div class="fb-comments" data-href="http://www.openapparatus.com/{{selectedItem.guid}}" data-numposts="5" data-colorscheme="light"></div>
+        <!-- COMMENT BOX -->
+        <section class="comment-box">
+          <img src="{{ userPicture }}">
+          <form class="input-group comment-form" ng-submit="commentCreate(commentFromView, selectedItem, userID)" id='commentCreateForm'>
+            <input type="text" class="form-control"  name="commentFromView" placeholder="Leave a comment..." ng-model="commentFromView">
+            <span class="input-group-btn">
+              <button class="btn btn-default" type="submit" id='submitBtn'><i class="glyphicon glyphicon-send"></i></button>
+            </span>
+          </form><!-- /input-group -->
+
+          <div class='comments' ng-repeat="comment in selectedItem.comments | object2Array | orderBy : 'value':true">
+            <div class='comment'>
+              <img src='https://graph.facebook.com/{{ comment.user }}/picture?width=25&height=25'>
+              <p>{{ comment.comment }}</p>
+            </div>
+            <div class='commentBtns'>
+              <button class='btn' id='commentUp'ng-click='upVoteComment(comment, selectedItem, userID)'><span class="glyphicon glyphicon-chevron-up"></span></button>
+              <button class='btn' id='commentDown'ng-click='downVoteComment(comment, selectedItem, userID)'><span class="glyphicon glyphicon-chevron-down"></span></button>
+              <h3>{{ comment.value }}</h3>
+            </div> 
+          </div> 
+        </section>
+
 
 <!-- MODAL-FOOTER DOESN'T DISPLAY ANYTHING BUT IS REQUIRED ??? 
         <div class="modal-footer">
