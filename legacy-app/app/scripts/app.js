@@ -8,7 +8,7 @@ angular.module('100App', [
 
   var nav = {
         templateUrl: 'views/nav.html',
-        controller: 'listCtrl',
+        // controller: 'listCtrl',
         // resolve: {
         //   user: function (userService) {
         //     return userService.get();
@@ -20,7 +20,7 @@ angular.module('100App', [
       };
   var test = {
         templateUrl: 'views/hello.html',
-        controller: 'listCtrl',
+        // controller: 'listCtrl',
         // resolve: {
         //   user: function (userService) {
         //     return userService.get();
@@ -32,7 +32,7 @@ angular.module('100App', [
       };
   var createModal = {
         templateUrl: 'views/createModal.html',
-        controller: 'listCtrl',
+        // controller: 'listCtrl',
         // resolve: {
         //   user: function (userService) {
         //     return userService.get();
@@ -45,7 +45,7 @@ angular.module('100App', [
 
   var itemModal = {
         templateUrl: 'views/itemModal.html',
-        controller: 'listCtrl',
+        // controller: 'listCtrl',
         // resolve: {
         //   user: function (userService) {
         //     return userService.get();

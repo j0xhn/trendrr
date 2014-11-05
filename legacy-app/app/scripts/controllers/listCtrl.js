@@ -279,7 +279,18 @@ $scope.downVote = function (tagName, selectedPerson, userID, $filter) {
     #NG-REPEAT RENDER FINISHED
 \* - - - - - - - - - - - - - - - - - - */
     $scope.$on('ngRepeatFinished', function(ngRepeatFinishedEvent) {
-        // HACK - removes empty block on links
+        $('#list-container').mixItUp({
+    animation: {
+      animateChangeLayout: true, 
+      animateResizeTargets: true, 
+      duration: 500,
+      effects: 'fade rotateZ(180deg) rotateX(180deg) scale(0.01)',
+      easing: 'cubic-bezier(0.645, 0.045, 0.355, 1)'
+    },
+    layout: {
+      containerClass: 'list' //inital layout
+    }
+  });// HACK - removes empty block on links
        $('.item-modal .additional-links li:first-child').remove();  
     });
 
