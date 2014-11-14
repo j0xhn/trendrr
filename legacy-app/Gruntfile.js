@@ -25,6 +25,15 @@ module.exports = function (grunt) {
       dist: 'dist'
     },
 
+    compass: {
+      dist: {
+        options: {
+          sassDir: '<%= yeoman.app %>/sass/',
+          cssDir: '<%= yeoman.app %>/styles/'
+        }
+      }
+    },
+
     // Watches files for changes and runs tasks based on the changed files
     watch: {
       js: {
@@ -38,9 +47,9 @@ module.exports = function (grunt) {
         files: ['test/spec/{,*/}*.js'],
         tasks: ['newer:jshint:test', 'karma']
       },
-      styles: {
-        files: ['<%= yeoman.app %>/styles/{,*/}*.css'],
-        tasks: ['newer:copy:styles', 'autoprefixer']
+      css: {
+        files: ['<%= yeoman.app %>/sass/*.scss'],
+        tasks: ['compass']
       },
       gruntfile: {
         files: ['Gruntfile.js']

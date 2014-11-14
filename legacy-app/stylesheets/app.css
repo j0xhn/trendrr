@@ -1,0 +1,18 @@
+/* line 1, ../app/sass/_header.scss */
+header {
+  color: blue;
+}
+/* line 3, ../app/sass/_header.scss */
+header h1 {
+  color: red;
+}
+
+/* line 1, ../app/sass/_trendrr.scss */
+body {
+  color: orange;
+}
+
+/* line 1, ../app/sass/_footer.scss */
+footer {
+  color: lightblue;
+}

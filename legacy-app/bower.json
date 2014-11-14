@@ -11,7 +11,6 @@
     "firebase": "~1.0.10",
     "angularfire": "~0.7.0",
     "angular-strap": "~0.7.8",
-    "mixitup": "~2.0.5",
     "jQuery": "~2.1.0",
     "underscore": "*",
     "angular-xeditable": "~0.1.8",

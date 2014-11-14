@@ -4,7 +4,7 @@
 <!-- - - - - - 
   #TOP LEFT 
 - - - - - - - -->
-  <div id="top_nav_left">
+  <div class="top_nav_left">
     <img src="http://uvef.net/wp-content/uploads/2014/09/UVEF-Logo1.png" id="sidebar-toggle-left"/>
     <div class='sidebar-open-left' id='left'>
       <ul>
@@ -245,7 +245,7 @@
             </li>
           </ul>
         </section>
-        
+
 
         <!-- COMMENT BOX -->
         <section class="comment-box">
@@ -255,7 +255,7 @@
             <span class="input-group-btn">
               <button class="btn btn-default" type="submit" id='submitBtn'><i class="glyphicon glyphicon-send"></i></button>
             </span>
-          </form><!-- /input-group -->
+          </form>
 
           <div class='comments' ng-repeat="comment in selectedItem.comments | object2Array | orderBy : 'value':true">
             <div class='comment'>
@@ -268,7 +268,7 @@
               <h3>{{ comment.value }}</h3>
             </div> 
           </div> 
-        </section>
+        </section>  
 
 
 <!-- MODAL-FOOTER DOESN'T DISPLAY ANYTHING BUT IS REQUIRED ??? 
