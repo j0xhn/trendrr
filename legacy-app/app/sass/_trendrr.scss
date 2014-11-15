@@ -1,3 +1,188 @@
-body{
-	color: orange;
-}
+
+/*------------------------------------*\
+	#General
+\*------------------------------------*/
+	div {
+		overflow: auto;
+	}
+
+		div[class*=' col'], div[class^='col'] {
+			padding-left: 0;
+			padding-right: 0;
+		}
+	.deal-banner {
+		margin: 0 0 1.33% 0;
+
+		.col-sm-6:nth-child(2) {
+			margin-right: 0;
+		}
+	}
+
+	button .fa-heart, button .fa-heart-o {
+		font-size: 16px;
+		padding: 1px;
+		cursor: pointer;
+	}
+
+
+
+
+
+/*------------------------------------*\
+	#Deal
+\*------------------------------------*/
+	.deal {
+		margin: 0 1.33% 1.33% 0;
+	}
+
+	.deal-hover-information {
+		opacity: 0;
+		position: absolute;
+		text-align: center;
+		top: 25%;
+		right: 0;
+		left: 0;
+
+		button {
+			margin: 0 0 10px 0;
+			width: inherit;
+			padding: 0;
+
+			&:nth-child(2) { // slight line height problem between symbols and fonts in buttons
+				padding: 7px 10px 6px;
+				margin-left: 5px;
+				font-size: 15px;
+			}
+
+			i {	// only added in for the first heart because of strange 'clipping' affect 
+				padding:12px 12px 9px;
+			}
+		}
+
+		h5 {
+			cursor: pointer;
+		}
+	}
+
+	.main-display {
+		img {
+			transition: all .5s;
+			width: 100%;
+		}
+
+		&:hover .deal-hover-information {
+			display: block;
+		}
+
+		&:hover img {
+			transform: scale(1.1);
+			opacity: .8;
+		}
+	}
+
+	.bottom-bar {
+		p {
+			margin: 0;
+			cursor: pointer;
+			color: $gray;
+			padding: 15px;
+			width: 50%;
+			text-align: center;
+			border-right: 1px solid $grayLighter;
+			&:last-child{
+				border-right:none;
+			}
+		}
+	}
+
+	.share-icons {
+		display:none;
+		margin-top: -50px;
+		width: 100%;
+
+		.fa { // bootstrap override
+			line-height: 50px;
+		}
+
+		a {
+			text-align: center;
+			width: 20%;
+			display: block;
+			float: left;
+			font-size: 22px;
+			border-right: 1px solid $grayLighter;
+
+			&:last-child {
+				border-right: none;
+			}
+			// &.google{ &:hover{ background-color: $jCoral; i { color: #fff; } } }
+			// &.facebook:hover{ background-color: $blue; i { color: #fff; } }
+			// &.twitter:hover{ background-color: $blue; i { color: #fff; } }
+			// &.pinterest:hover{ background-color: #991c1c; i { color: #fff; } }
+			// &.envelope:hover{ background-color: $grayLight; i { color: #fff; } }
+
+		}
+	}
+
+	.actions {
+		height: 50px;
+	}
+
+
+
+	/*------------------------------------*\
+		#Modal
+	\*------------------------------------*/
+
+	.modal {
+		overflow: auto;
+		h5,h4,p{
+			text-align: center;
+			i{
+				padding: 1px;
+			}
+		}
+
+		img{
+			width: 100%;
+			margin: 0 0 20px 0;
+		}
+
+		svg {
+			right: 0;
+			top: 0;
+			margin: 2px;
+		}
+
+		.action-bar {
+			background-color: 	  #FBFBFB;
+			margin-bottom: 25px;
+			.share-icons {
+				margin-top: -77px;
+			}
+		}
+
+		.favorite-button {
+			position: absolute;
+			right: 25px;
+			top: 55px;
+			line-height: 17px;
+			padding: 0px;
+			width: inherit;
+			opacity: .6;
+
+			i{
+				padding: 10px 10px 8px 10px;
+			}
+		}
+	}
+
+	.modal-dialog {
+		padding: 0;
+	}
+
+	.modal-content {
+		border: none;
+		padding: 10px;
+	}
+
