@@ -1,15 +1,16 @@
 
 /*------------------------------------*\
-	#General
+	#GENERAL
 \*------------------------------------*/
 	div {
 		overflow: auto;
 	}
 
-		div[class*=' col'], div[class^='col'] {
-			padding-left: 0;
-			padding-right: 0;
-		}
+	div[class*=' col'], div[class^='col'] {
+		padding-left: 0;
+		padding-right: 0;
+	}
+
 	.deal-banner {
 		margin: 0 0 1.33% 0;
 
@@ -23,6 +24,77 @@
 		padding: 1px;
 		cursor: pointer;
 	}
+
+	input:focus {
+		outline: none;
+	}
+
+	.main-list {
+		padding: 0;
+	}
+
+
+/*------------------------------------*\
+	#BANNER
+\*------------------------------------*/
+
+.banner{
+	background: url(http://uvef.net/wp-content/uploads/2014/09/mountain-bg.jpg) bottom center;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+
+	h1{
+		color: #ffffff;
+		font-weight: 900;
+		padding: 57px 0 45px;
+		display: inline-block;
+		font-size: 14px;
+		text-align: center;
+		width: 100%;
+		margin: 0 auto;
+	}
+	h2{
+		font-size: 2em;
+		margin: -30px 0 0 0;
+		font-weight: 900;
+		line-height: 36px;
+	}
+	input{
+		background: rgba(255, 255, 255, 0.4);
+		font-weight: 100;
+		color: #fff;
+		border-radius: 4px;
+		text-align: left;
+		padding: 5px 9px 7px 7px;
+		font-size: 18px;
+		line-height: normal;
+		border: none;
+		width: 320px;
+		display: inherit;
+		margin: 0 auto;
+		transition: all .3s;
+		&:focus{
+			background: rgba(255, 255, 255, 0.6);
+			transition: all .3s;
+		}
+	}
+	input::-webkit-input-placeholder {
+		color: #fff;
+	}
+}
+
+
+
+/*------------------------------------*\
+	#ITEM
+\*------------------------------------*/
+.item-info {
+	p {
+		margin: 0;
+	}
+}
 
 
 

@@ -8027,10 +8027,10 @@ button.close {
 }
 /* - - - - - - - - - - - - - *\
 
-  HEADER
+  #HEADER
   
 \* - - - - - - - - - - - - - */
-/* line 7, ../sass/_header.scss */
+/* line 9, ../sass/_header.scss */
 .top_nav {
   width: 100%;
   height: 35px;
@@ -8040,32 +8040,93 @@ button.close {
   z-index: 2;
   display: inline-block;
 }
-/* line 16, ../sass/_header.scss */
+/* line 18, ../sass/_header.scss */
 .top_nav img {
   max-height: 23px;
 }
-/* line 22, ../sass/_header.scss */
+/* line 24, ../sass/_header.scss */
 .top_nav ul li {
   display: inline;
 }
 
-/* line 28, ../sass/_header.scss */
+/* - - - - - - - - - - - - - *\
+
+  #LEFT NAV
+  
+\* - - - - - - - - - - - - - */
+/* line 40, ../sass/_header.scss */
 .top_nav_left {
-  float: left;
   padding: 6px 5px;
   text-align: right;
+  float: left;
 }
 
-/* line 34, ../sass/_header.scss */
-.list-title h1 {
+/* line 46, ../sass/_header.scss */
+.list-title {
   color: #f9f2f2;
-  padding: 8px 0 0 0;
+  padding: 0 0 0 8px;
   font-weight: 100;
-  font-size: 1.7em;
+  font-size: 20px;
+  float: left;
+  margin: 0;
+}
+
+/* line 55, ../sass/_header.scss */
+#sidebar-toggle-left {
+  float: left;
+  transition: all .3s;
+  -webkit-transition: all .3s;
+}
+/* line 60, ../sass/_header.scss */
+#sidebar-toggle-left:hover {
+  -webkit-transform: scale(1.1);
+}
+
+/* - - - - - - - - - - - - - *\
+
+  #RIGHT NAV
+  
+\* - - - - - - - - - - - - - */
+/* line 77, ../sass/_header.scss */
+.top-nav-right {
+  float: right;
+  cursor: pointer;
+}
+
+/* line 82, ../sass/_header.scss */
+.search-nav {
+  float: right;
+  background-color: #daeae9;
+  margin: 7px;
+  padding: 0 0 0 6px;
+  font-family: 'FontAwesome';
+  width: 95px;
+  line-height: 20px;
+  border-radius: 4px;
+  border: none;
+  -webkit-transition: all 0.30s ease-in-out;
+  -moz-transition: all 0.30s ease-in-out;
+  -ms-transition: all 0.30s ease-in-out;
+  -o-transition: all 0.30s ease-in-out;
+}
+/* line 98, ../sass/_header.scss */
+.search-nav:focus {
+  width: 200px;
+  background-color: white;
+  line-height: 20px;
+  padding-left: 5px;
+  outline: none;
+}
+
+/* line 107, ../sass/_header.scss */
+.user-nav {
+  padding: 6px 10px 6px 6px;
+  float: right;
+  font-size: 22px;
 }
 
 /*------------------------------------*\
-	#General
+	#GENERAL
 \*------------------------------------*/
 /* line 5, ../sass/_trendrr.scss */
 div {
@@ -8078,31 +8139,104 @@ div[class*=' col'], div[class^='col'] {
   padding-right: 0;
 }
 
-/* line 13, ../sass/_trendrr.scss */
+/* line 14, ../sass/_trendrr.scss */
 .deal-banner {
   margin: 0 0 1.33% 0;
 }
-/* line 16, ../sass/_trendrr.scss */
+/* line 17, ../sass/_trendrr.scss */
 .deal-banner .col-sm-6:nth-child(2) {
   margin-right: 0;
 }
 
-/* line 21, ../sass/_trendrr.scss */
+/* line 22, ../sass/_trendrr.scss */
 button .fa-heart, button .fa-heart-o {
   font-size: 16px;
   padding: 1px;
   cursor: pointer;
 }
 
+/* line 28, ../sass/_trendrr.scss */
+input:focus {
+  outline: none;
+}
+
+/* line 32, ../sass/_trendrr.scss */
+.main-list {
+  padding: 0;
+}
+
+/*------------------------------------*\
+	#BANNER
+\*------------------------------------*/
+/* line 41, ../sass/_trendrr.scss */
+.banner {
+  background: url(http://uvef.net/wp-content/uploads/2014/09/mountain-bg.jpg) bottom center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+/* line 48, ../sass/_trendrr.scss */
+.banner h1 {
+  color: #ffffff;
+  font-weight: 900;
+  padding: 57px 0 45px;
+  display: inline-block;
+  font-size: 14px;
+  text-align: center;
+  width: 100%;
+  margin: 0 auto;
+}
+/* line 58, ../sass/_trendrr.scss */
+.banner h2 {
+  font-size: 2em;
+  margin: -30px 0 0 0;
+  font-weight: 900;
+  line-height: 36px;
+}
+/* line 64, ../sass/_trendrr.scss */
+.banner input {
+  background: rgba(255, 255, 255, 0.4);
+  font-weight: 100;
+  color: #fff;
+  border-radius: 4px;
+  text-align: left;
+  padding: 5px 9px 7px 7px;
+  font-size: 18px;
+  line-height: normal;
+  border: none;
+  width: 320px;
+  display: inherit;
+  margin: 0 auto;
+  transition: all .3s;
+}
+/* line 78, ../sass/_trendrr.scss */
+.banner input:focus {
+  background: rgba(255, 255, 255, 0.6);
+  transition: all .3s;
+}
+/* line 83, ../sass/_trendrr.scss */
+.banner input::-webkit-input-placeholder {
+  color: #fff;
+}
+
+/*------------------------------------*\
+	#ITEM
+\*------------------------------------*/
+/* line 94, ../sass/_trendrr.scss */
+.item-info p {
+  margin: 0;
+}
+
 /*------------------------------------*\
 	#Deal
 \*------------------------------------*/
-/* line 34, ../sass/_trendrr.scss */
+/* line 106, ../sass/_trendrr.scss */
 .deal {
   margin: 0 1.33% 1.33% 0;
 }
 
-/* line 38, ../sass/_trendrr.scss */
+/* line 110, ../sass/_trendrr.scss */
 .deal-hover-information {
   opacity: 0;
   position: absolute;
@@ -8111,43 +8245,43 @@ button .fa-heart, button .fa-heart-o {
   right: 0;
   left: 0;
 }
-/* line 46, ../sass/_trendrr.scss */
+/* line 118, ../sass/_trendrr.scss */
 .deal-hover-information button {
   margin: 0 0 10px 0;
   width: inherit;
   padding: 0;
 }
-/* line 51, ../sass/_trendrr.scss */
+/* line 123, ../sass/_trendrr.scss */
 .deal-hover-information button:nth-child(2) {
   padding: 7px 10px 6px;
   margin-left: 5px;
   font-size: 15px;
 }
-/* line 57, ../sass/_trendrr.scss */
+/* line 129, ../sass/_trendrr.scss */
 .deal-hover-information button i {
   padding: 12px 12px 9px;
 }
-/* line 62, ../sass/_trendrr.scss */
+/* line 134, ../sass/_trendrr.scss */
 .deal-hover-information h5 {
   cursor: pointer;
 }
 
-/* line 68, ../sass/_trendrr.scss */
+/* line 140, ../sass/_trendrr.scss */
 .main-display img {
   transition: all .5s;
   width: 100%;
 }
-/* line 73, ../sass/_trendrr.scss */
+/* line 145, ../sass/_trendrr.scss */
 .main-display:hover .deal-hover-information {
   display: block;
 }
-/* line 77, ../sass/_trendrr.scss */
+/* line 149, ../sass/_trendrr.scss */
 .main-display:hover img {
   transform: scale(1.1);
   opacity: .8;
 }
 
-/* line 84, ../sass/_trendrr.scss */
+/* line 156, ../sass/_trendrr.scss */
 .bottom-bar p {
   margin: 0;
   cursor: pointer;
@@ -8157,22 +8291,22 @@ button .fa-heart, button .fa-heart-o {
   text-align: center;
   border-right: 1px solid #eeeeee;
 }
-/* line 92, ../sass/_trendrr.scss */
+/* line 164, ../sass/_trendrr.scss */
 .bottom-bar p:last-child {
   border-right: none;
 }
 
-/* line 98, ../sass/_trendrr.scss */
+/* line 170, ../sass/_trendrr.scss */
 .share-icons {
   display: none;
   margin-top: -50px;
   width: 100%;
 }
-/* line 103, ../sass/_trendrr.scss */
+/* line 175, ../sass/_trendrr.scss */
 .share-icons .fa {
   line-height: 50px;
 }
-/* line 107, ../sass/_trendrr.scss */
+/* line 179, ../sass/_trendrr.scss */
 .share-icons a {
   text-align: center;
   width: 20%;
@@ -8181,12 +8315,12 @@ button .fa-heart, button .fa-heart-o {
   font-size: 22px;
   border-right: 1px solid #eeeeee;
 }
-/* line 115, ../sass/_trendrr.scss */
+/* line 187, ../sass/_trendrr.scss */
 .share-icons a:last-child {
   border-right: none;
 }
 
-/* line 127, ../sass/_trendrr.scss */
+/* line 199, ../sass/_trendrr.scss */
 .actions {
   height: 50px;
 }
@@ -8194,39 +8328,39 @@ button .fa-heart, button .fa-heart-o {
 /*------------------------------------*\
 	#Modal
 \*------------------------------------*/
-/* line 137, ../sass/_trendrr.scss */
+/* line 209, ../sass/_trendrr.scss */
 .modal {
   overflow: auto;
 }
-/* line 139, ../sass/_trendrr.scss */
+/* line 211, ../sass/_trendrr.scss */
 .modal h5, .modal h4, .modal p {
   text-align: center;
 }
-/* line 141, ../sass/_trendrr.scss */
+/* line 213, ../sass/_trendrr.scss */
 .modal h5 i, .modal h4 i, .modal p i {
   padding: 1px;
 }
-/* line 146, ../sass/_trendrr.scss */
+/* line 218, ../sass/_trendrr.scss */
 .modal img {
   width: 100%;
   margin: 0 0 20px 0;
 }
-/* line 151, ../sass/_trendrr.scss */
+/* line 223, ../sass/_trendrr.scss */
 .modal svg {
   right: 0;
   top: 0;
   margin: 2px;
 }
-/* line 157, ../sass/_trendrr.scss */
+/* line 229, ../sass/_trendrr.scss */
 .modal .action-bar {
   background-color: #FBFBFB;
   margin-bottom: 25px;
 }
-/* line 160, ../sass/_trendrr.scss */
+/* line 232, ../sass/_trendrr.scss */
 .modal .action-bar .share-icons {
   margin-top: -77px;
 }
-/* line 165, ../sass/_trendrr.scss */
+/* line 237, ../sass/_trendrr.scss */
 .modal .favorite-button {
   position: absolute;
   right: 25px;
@@ -8236,17 +8370,17 @@ button .fa-heart, button .fa-heart-o {
   width: inherit;
   opacity: .6;
 }
-/* line 174, ../sass/_trendrr.scss */
+/* line 246, ../sass/_trendrr.scss */
 .modal .favorite-button i {
   padding: 10px 10px 8px 10px;
 }
 
-/* line 180, ../sass/_trendrr.scss */
+/* line 252, ../sass/_trendrr.scss */
 .modal-dialog {
   padding: 0;
 }
 
-/* line 184, ../sass/_trendrr.scss */
+/* line 256, ../sass/_trendrr.scss */
 .modal-content {
   border: none;
   padding: 10px;
@@ -8255,4 +8389,62 @@ button .fa-heart, button .fa-heart-o {
 /* line 1, ../sass/_footer.scss */
 footer {
   color: #fff;
+}
+
+/* Right Hand Sidebar */
+/* line 5, ../sass/_sidebars.scss */
+.sidebar-open-right ul {
+  padding-top: 5px;
+}
+/* line 9, ../sass/_sidebars.scss */
+.sidebar-open-right #right, .sidebar-open-right #center {
+  transform: translateX(-300px);
+  -webkit-transform: translateX(-300px);
+  transition: all .3s;
+  -webkit-transition: all .3s;
+}
+/* line 15, ../sass/_sidebars.scss */
+.sidebar-open-right #sidebar-toggle-right {
+  transform: rotate(-90deg);
+  -webkit-transform: rotate(-90deg);
+  transition: all .3s;
+  -webkit-transition: all .3s;
+}
+
+/* line 23, ../sass/_sidebars.scss */
+#sidebar-toggle-right {
+  transition: all .3s;
+}
+
+/* Left Hand Sidebar */
+/* line 33, ../sass/_sidebars.scss */
+#left {
+  top: 50px;
+  width: 123px;
+  height: 100%;
+  position: fixed;
+  left: -123;
+  margin-left: -127px;
+  text-align: right;
+  transition: all .3s;
+  -webkit-transition: all .3s;
+}
+
+/* line 47, ../sass/_sidebars.scss */
+.sidebar-open-left ul {
+  padding-top: 0px;
+}
+/* line 51, ../sass/_sidebars.scss */
+.sidebar-open-left #left, .sidebar-open-left #center {
+  transform: translateX(123px);
+  -webkit-transform: translateX(123px);
+  transition: all .3s;
+  -webkit-transition: all .3s;
+}
+/* line 58, ../sass/_sidebars.scss */
+.sidebar-open-left #sidebar-toggle-left {
+  transform: rotate(90deg);
+  -webkit-transform: rotate(90deg);
+  transition: all .3s;
+  -webkit-transition: all .3s;
 }
