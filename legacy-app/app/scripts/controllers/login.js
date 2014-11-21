@@ -61,7 +61,7 @@ angular.module('100App')
           console.log(error);
         } else if (user) {
           //hides login
-          $( "#top_nav_right" ).find('a').hide()
+          $( ".top-nav-right" ).find('a').hide()
           //checks to see if there is user
           var peopleObject = listService.getUsers();
           peopleObject.$on('loaded', function() {

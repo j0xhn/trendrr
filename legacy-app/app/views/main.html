@@ -1,10 +1,10 @@
 
-<div class="top_nav">
+<div class="top-nav">
 
 <!-- - - - - - 
   #TOP LEFT 
   - - - - - - - -->
-  <div class="top_nav_left">
+  <div class="top-nav-left">
     <img src="http://uvef.net/wp-content/uploads/2014/09/UVEF-Logo1.png" id="sidebar-toggle-left"/>
     <h1 class='list-title'>UVEF 100</h1>
 
@@ -37,14 +37,11 @@
 <!-- - - - - - 
   #TOP RIGHT 
 - - - - - - - -->
-  <div id="top_nav_right">
+  <div class="top-nav-right">
 
     <a class="user-nav" ng-controller='LoginCtrl' ng-click="submitLogin($event)"><i class="fa fa-user"></i></a>
+    <img class="fr square-circle profile" ng-click="selectedPerson = list[userID]" src="{{ userPicture }}" id='sidebar-toggle-right'>
     <input class="search-nav" type='search' ng-model='search' placeholder="&#xF002;">
-    <div id="profile_circle_profile">
-      <!-- makes selectedPerson same as user -->
-      <span><img ng-click="selectedPerson = list[userID]" src="{{ userPicture }}" id='sidebar-toggle-right'></span> 
-    </div>
 
 
 <!-- ACCOUNT INFO -->
@@ -99,69 +96,6 @@
   </div>
 </section>
 
-
-<!-- DEAL FROM JANE -->
-        <div class="deals">
-            <div class="deal col-xs-12 col-sm-6 col-md-4 col-lg-3 bgGrayDarker">
-                <div class="main-display">
-                    <img src="http://s3.amazonaws.com/cdntest.jane/img/deals/39302.jpg" alt="Test Pic" />
-                    <div class="deal-hover-information">
-
-                        <button class="btn btn-plain bg-white">
-                            <i class="fa fa-heart-o txt-gray favorite"></i>
-                        </button>
-
-                        <button class="btn btn-plain bgMint">
-
-
-                            <i class="fa fa-share pad0 f14"></i>&nbsp;SHARE
-                        </button>
-
-                        <h5 class="ta-center txt-white f16 f300 normal" data-toggle="modal" data-target="#sneak-peak-modal">Preview Deal <i class="fa fa-chevron-right"></i></h5>
-                    </div>
-                </div>
-
-                <div class="bottom-bar bg-white">
-
-                    <div class="actions">
-                        <p class="fl gotham"><i class="fa fa-heart-o favorite"></i>&nbsp;3536</p>
-                        <p class="fr gotham share-button"><i class="fa fa-share"></i>&nbsp;SHARE</p>
-                    </div>
-
-                    <div class="fr share-icons">
-
-                        <a class="google" href="https://plus.google.com/115831039491548021485/posts"><i class="fa fa-google-plus txt-pink"></i></a>
-
-                        <a class="facebook" href="https://www.facebook.com/veryjane"><i class="fa fa-facebook txt-blue-dark"></i></a>
-
-                        <a class="twitter" href="https://twitter.com/janedeals"><i class="fa fa-twitter txt-blue"></i></a>
-
-                        <a class="pinterest" href="http://www.pinterest.com/veryjane/"><i class="fa fa-pinterest txt-red"></i></a>
-
-                        <a class="envelope" href="mailto:"><i class="fa fa-envelope-o txt-grayLight"></i></a>
-
-                    </div>
-                </div>
-            </div>
-
-            <div class="deal col-xs-12 col-sm-6 col-md-4 col-lg-3  bgCoral">
-                Deal
-            </div>
-
-            <div class="deal col-xs-12 col-sm-6 col-md-4 col-lg-3  bgCoral">
-                Deal
-            </div>
-
-            <div class="deal col-xs-12 col-sm-6 col-md-4 col-lg-3  bgCoral">
-                Deal
-            </div>
-
-            <div class="deal col-xs-12 col-sm-6 col-md-4 col-lg-3  bgCoral">
-                Deal
-            </div>
-        </div>
-
-    </div> <!-- /DEALS FROM JANE -->
 
 
 

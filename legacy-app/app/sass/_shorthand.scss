@@ -81,7 +81,8 @@
 	.thirty		{ width: 30% !important; }
 	.seventy	{ width: 70% !important; }
 
-	.overflow	{overflow: auto;}
+	.overflow-auto		{overflow: auto;}
+	.overflow-hidden 	{overflow: hidden;}
 
 	.fr { float:right !important; }
 	.fl { float:left; }
@@ -163,6 +164,7 @@
 	.bg-primary 	{ background-color: #4db8f6 !important; }
 	.border-primary	{ border-color: #4db8f6 !important; }
 	.bg-secondary 	{ background-color: #A5F0BA !important; }
+	.square-circle	{ border-radius: 50%; }
 
 
 
