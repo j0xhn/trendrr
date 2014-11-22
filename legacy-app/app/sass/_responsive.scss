@@ -30,7 +30,6 @@
 
 /* Extra Small Devices, Phones */
 @media only screen and (min-width : 580px) {
-	.content	{ padding: 3px 16px; }
 }
 
 /* Small Devices, Tablets */
@@ -40,7 +39,7 @@
 	.col-sm-6 { width: 49.3%; &:nth-child(2n + 2) { margin-right: 0; } }
 
 	// elements
-	.banner h1{ font-size: 4em; h2{ margin: 30px 0 0 0; } }
+	.banner h1{ font-size: 4em; padding-top: 30px; h2{ margin: 30px 0 0 0; } }
 	.search-nav input:focus{ width: 200px; }
 	h1			{ font-size: 34px; 
 		span	{ font-size: 16px; }
@@ -52,9 +51,12 @@
 	.modal-dialog.createModal { max-width: 400px; margin: 100px auto; }
 	.modal-content { padding: 40px; }
 	.modal-dialog{ width: 720px; padding: 0; margin-top: 100px; }
-	.modal svg { margin: 13px; }
-	.modal .favorite-button {right: 60px; top: 60px;}
-	.modal h5 { font-size: 18px; }
+	
+	.modal {
+		.leaveModal{ position: absolute; top: 0; right: 0; margin: 13px; }
+		.favorite-button {right: 60px; top: 60px;}
+		h5 { font-size: 18px; }
+	}
 
 }
 
@@ -65,7 +67,7 @@
 
 	//grid
 	.col-sm-6:nth-child(2n + 2) { margin-right: 1.33%; } 
-	.col-md-4 { width: 32.4%; &:nth-child(3n + 3) { margin-right: 0; }
+	.col-md-4 { width: 32.4%; &:nth-child(3n + 3) { margin-right: 0; } }
 
 	// elements
 	section.firstSection { padding-top: 50px; }
@@ -117,10 +119,5 @@
 
 	.video-modal-mirror { width: 869px; }
 
-
-}
-
-/* Large Devices, Desktops */
-@media only screen and (min-width : 1367px) {
 
 }

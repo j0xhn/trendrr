@@ -2,10 +2,6 @@
 /*------------------------------------*\
 	#GENERAL
 \*------------------------------------*/
-	section{
-		overflow: auto;
-	}
-
 	div[class*=' col'], div[class^='col'] {
 		padding-left: 0;
 		padding-right: 0;
@@ -37,11 +33,13 @@
 	}
 
 	.main-list {
-		padding: 10px 0;
+		padding: 10px 0 15px;
+		overflow: auto;
 	}
 
 	a{
 		text-decoration: underline;
+		cursor: pointer;
 	}
 
 
@@ -67,6 +65,7 @@
 		text-align: center;
 		width: 100%;
 		margin: 0 auto;
+		padding-bottom: 20px;
 	}
 	h2{
 		font-size: 2em;
@@ -248,65 +247,4 @@ box-shadow: 0px 0px 8px 2px #000000;
 
 
 
-
-
-	/*------------------------------------*\
-		#Modal
-	\*------------------------------------*/
-
-	.modal {
-		overflow: auto;
-		h5,h4,p{
-			text-align: center;
-			i{
-				padding: 1px;
-			}
-		}
-
-		img{
-			width: 100%;
-			margin: 0 0 20px 0;
-		}
-
-		svg {
-			right: 0;
-			top: 0;
-			margin: 2px;
-		}
-
-		.action-bar {
-			background-color: 	  #FBFBFB;
-			margin-bottom: 25px;
-			.share-icons {
-				margin-top: -77px;
-			}
-		}
-
-		.favorite-button {
-			position: absolute;
-			right: 25px;
-			top: 55px;
-			line-height: 17px;
-			padding: 0px;
-			width: inherit;
-			opacity: .6;
-
-			i{
-				padding: 10px 10px 8px 10px;
-			}
-		}
-	}
-
-	.modal-body {
-		padding: 0;
-	}
-
-	.modal-dialog {
-		padding: 0;
-	}
-
-	.modal-content {
-		border: none;
-		padding: 10px;
-	}
 

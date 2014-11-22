@@ -8804,6 +8804,14 @@ button.close {
 /* line 1, ../sass/_footer.scss */
 footer {
   color: #fff;
+  z-index: 1000;
+  font-size: 11px;
+  position: fixed;
+  width: 100%;
+  left: 0px;
+  bottom: 0px;
+  background-color: #383942;
+  padding: 6px 20px 6px 20px;
 }
 
 /* Right Hand Sidebar */
@@ -8865,20 +8873,86 @@ footer {
 }
 
 /*------------------------------------*\
+	#Modal
+\*------------------------------------*/
+/* line 6, ../sass/_modal.scss */
+.modal {
+  overflow: auto;
+}
+/* line 8, ../sass/_modal.scss */
+.modal h5, .modal h4, .modal p {
+  text-align: center;
+}
+/* line 10, ../sass/_modal.scss */
+.modal h5 i, .modal h4 i, .modal p i {
+  padding: 1px;
+}
+/* line 15, ../sass/_modal.scss */
+.modal .action-bar {
+  background-color: #FBFBFB;
+  margin-bottom: 25px;
+}
+/* line 18, ../sass/_modal.scss */
+.modal .action-bar .share-icons {
+  margin-top: -77px;
+}
+/* line 23, ../sass/_modal.scss */
+.modal .favorite-button {
+  position: absolute;
+  right: 25px;
+  top: 55px;
+  line-height: 17px;
+  padding: 0px;
+  width: inherit;
+  opacity: .6;
+}
+/* line 32, ../sass/_modal.scss */
+.modal .favorite-button i {
+  padding: 10px 10px 8px 10px;
+}
+/* line 38, ../sass/_modal.scss */
+.modal .main-display img {
+  margin-bottom: 20px;
+}
+
+/* line 44, ../sass/_modal.scss */
+.leaveModal {
+  opacity: .4;
+  font-size: 19px;
+}
+/* line 47, ../sass/_modal.scss */
+.leaveModal:hover {
+  opacity: .5;
+  cursor: pointer;
+}
+
+/* line 53, ../sass/_modal.scss */
+.modal-body {
+  padding: 0;
+}
+
+/* line 57, ../sass/_modal.scss */
+.modal-dialog {
+  padding: 0;
+}
+
+/* line 61, ../sass/_modal.scss */
+.modal-content {
+  border: none;
+  padding: 10px;
+  overflow-x: hidden;
+}
+
+/*------------------------------------*\
 	#GENERAL
 \*------------------------------------*/
 /* line 5, ../sass/_trendrr.scss */
-section {
-  overflow: auto;
-}
-
-/* line 9, ../sass/_trendrr.scss */
 div[class*=' col'], div[class^='col'] {
   padding-left: 0;
   padding-right: 0;
 }
 
-/* line 14, ../sass/_trendrr.scss */
+/* line 10, ../sass/_trendrr.scss */
 .content {
   width: 100%;
   margin: 0 auto;
@@ -8886,41 +8960,43 @@ div[class*=' col'], div[class^='col'] {
   padding: 0 10px;
 }
 
-/* line 21, ../sass/_trendrr.scss */
+/* line 17, ../sass/_trendrr.scss */
 .deal-banner {
   margin: 0 0 1.33% 0;
 }
-/* line 24, ../sass/_trendrr.scss */
+/* line 20, ../sass/_trendrr.scss */
 .deal-banner .col-sm-6:nth-child(2) {
   margin-right: 0;
 }
 
-/* line 29, ../sass/_trendrr.scss */
+/* line 25, ../sass/_trendrr.scss */
 button .fa-heart, button .fa-heart-o {
   font-size: 16px;
   padding: 1px;
   cursor: pointer;
 }
 
-/* line 35, ../sass/_trendrr.scss */
+/* line 31, ../sass/_trendrr.scss */
 input:focus {
   outline: none;
 }
 
-/* line 39, ../sass/_trendrr.scss */
+/* line 35, ../sass/_trendrr.scss */
 .main-list {
-  padding: 10px 0;
+  padding: 10px 0 15px;
+  overflow: auto;
 }
 
-/* line 43, ../sass/_trendrr.scss */
+/* line 40, ../sass/_trendrr.scss */
 a {
   text-decoration: underline;
+  cursor: pointer;
 }
 
 /*------------------------------------*\
 	#BANNER
 \*------------------------------------*/
-/* line 52, ../sass/_trendrr.scss */
+/* line 50, ../sass/_trendrr.scss */
 .banner {
   background: url(http://uvef.net/wp-content/uploads/2014/09/mountain-bg.jpg) bottom center;
   -webkit-background-size: cover;
@@ -8929,7 +9005,7 @@ a {
   background-size: cover;
   padding: 57px 0 45px;
 }
-/* line 62, ../sass/_trendrr.scss */
+/* line 60, ../sass/_trendrr.scss */
 .banner h1 {
   color: #ffffff;
   font-weight: 900;
@@ -8938,20 +9014,21 @@ a {
   text-align: center;
   width: 100%;
   margin: 0 auto;
+  padding-bottom: 20px;
 }
-/* line 71, ../sass/_trendrr.scss */
+/* line 70, ../sass/_trendrr.scss */
 .banner h2 {
   font-size: 2em;
   margin: -30px 0 0 0;
   font-weight: 900;
   line-height: 36px;
 }
-/* line 78, ../sass/_trendrr.scss */
+/* line 77, ../sass/_trendrr.scss */
 .banner a {
   color: #fff;
   opacity: .5;
 }
-/* line 83, ../sass/_trendrr.scss */
+/* line 82, ../sass/_trendrr.scss */
 .banner input {
   background: rgba(255, 255, 255, 0.4);
   font-weight: 100;
@@ -8967,17 +9044,17 @@ a {
   margin: 0 auto;
   transition: all .3s;
 }
-/* line 97, ../sass/_trendrr.scss */
+/* line 96, ../sass/_trendrr.scss */
 .banner input:focus {
   background: rgba(255, 255, 255, 0.6);
   transition: all .3s;
 }
-/* line 102, ../sass/_trendrr.scss */
+/* line 101, ../sass/_trendrr.scss */
 .banner input::-webkit-input-placeholder {
   color: #fff;
 }
 
-/* line 107, ../sass/_trendrr.scss */
+/* line 106, ../sass/_trendrr.scss */
 .banner-actions {
   text-align: center;
 }
@@ -8985,12 +9062,12 @@ a {
 /*------------------------------------*\
 	#ITEM
 \*------------------------------------*/
-/* line 117, ../sass/_trendrr.scss */
+/* line 116, ../sass/_trendrr.scss */
 .item-info p {
   margin: 0;
 }
 
-/* line 122, ../sass/_trendrr.scss */
+/* line 121, ../sass/_trendrr.scss */
 .item {
   text-align: left;
   display: inline-block;
@@ -9000,7 +9077,7 @@ a {
   margin: 0 1.33% 1.33% 0;
 }
 
-/* line 132, ../sass/_trendrr.scss */
+/* line 131, ../sass/_trendrr.scss */
 .item:after {
   content: "";
   width: 124px;
@@ -9016,7 +9093,7 @@ a {
   box-shadow: 0px 0px 8px 2px #000000;
 }
 
-/* line 147, ../sass/_trendrr.scss */
+/* line 146, ../sass/_trendrr.scss */
 .item-info {
   position: relative;
   padding: 5px;
@@ -9026,18 +9103,18 @@ a {
   background-color: #ffffff;
 }
 
-/* line 156, ../sass/_trendrr.scss */
+/* line 155, ../sass/_trendrr.scss */
 .item img {
   width: 100%;
 }
 
-/* line 160, ../sass/_trendrr.scss */
+/* line 159, ../sass/_trendrr.scss */
 .item-img-wrapper {
   height: 89px;
   width: 150px;
 }
 
-/* line 165, ../sass/_trendrr.scss */
+/* line 164, ../sass/_trendrr.scss */
 .orange-circle {
   background-color: #f0b23a;
   border-radius: 50%;
@@ -9047,7 +9124,7 @@ a {
   position: relative;
 }
 
-/* line 176, ../sass/_trendrr.scss */
+/* line 175, ../sass/_trendrr.scss */
 .item-hover-information {
   text-align: center;
   overflow: hidden;
@@ -9056,37 +9133,37 @@ a {
   right: 0;
   left: 0;
 }
-/* line 186, ../sass/_trendrr.scss */
+/* line 185, ../sass/_trendrr.scss */
 .item-hover-information .bottom-buttons {
   padding: 16px;
 }
-/* line 188, ../sass/_trendrr.scss */
+/* line 187, ../sass/_trendrr.scss */
 .item-hover-information .bottom-buttons div {
   cursor: pointer;
 }
 
-/* line 194, ../sass/_trendrr.scss */
+/* line 193, ../sass/_trendrr.scss */
 .main-display {
   position: relative;
 }
-/* line 197, ../sass/_trendrr.scss */
+/* line 196, ../sass/_trendrr.scss */
 .main-display img {
   transition: all .5s;
   width: 100%;
   cursor: pointer;
 }
 
-/* line 204, ../sass/_trendrr.scss */
+/* line 203, ../sass/_trendrr.scss */
 .share-icons {
   width: 100%;
   bottom: -49px;
   position: absolute;
 }
-/* line 209, ../sass/_trendrr.scss */
+/* line 208, ../sass/_trendrr.scss */
 .share-icons .fa {
   line-height: 50px;
 }
-/* line 213, ../sass/_trendrr.scss */
+/* line 212, ../sass/_trendrr.scss */
 .share-icons a {
   background-color: #fff;
   text-align: center;
@@ -9096,52 +9173,52 @@ a {
   font-size: 22px;
   border-right: 1px solid #eeeeee;
 }
-/* line 222, ../sass/_trendrr.scss */
+/* line 221, ../sass/_trendrr.scss */
 .share-icons a:last-child {
   border-right: none;
 }
-/* line 225, ../sass/_trendrr.scss */
+/* line 224, ../sass/_trendrr.scss */
 .share-icons a.google:hover {
   background-color: #ff8188;
 }
-/* line 225, ../sass/_trendrr.scss */
+/* line 224, ../sass/_trendrr.scss */
 .share-icons a.google:hover i {
   color: #fff;
 }
-/* line 226, ../sass/_trendrr.scss */
+/* line 225, ../sass/_trendrr.scss */
 .share-icons a.facebook:hover {
   background-color: #0064cd;
 }
-/* line 226, ../sass/_trendrr.scss */
+/* line 225, ../sass/_trendrr.scss */
 .share-icons a.facebook:hover i {
   color: #fff;
 }
-/* line 227, ../sass/_trendrr.scss */
+/* line 226, ../sass/_trendrr.scss */
 .share-icons a.twitter:hover {
   background-color: #95d2e9;
 }
-/* line 227, ../sass/_trendrr.scss */
+/* line 226, ../sass/_trendrr.scss */
 .share-icons a.twitter:hover i {
   color: #fff;
 }
-/* line 228, ../sass/_trendrr.scss */
+/* line 227, ../sass/_trendrr.scss */
 .share-icons a.pinterest:hover {
   background-color: #991c1c;
 }
-/* line 228, ../sass/_trendrr.scss */
+/* line 227, ../sass/_trendrr.scss */
 .share-icons a.pinterest:hover i {
   color: #fff;
 }
-/* line 229, ../sass/_trendrr.scss */
+/* line 228, ../sass/_trendrr.scss */
 .share-icons a.envelope:hover {
   background-color: #999999;
 }
-/* line 229, ../sass/_trendrr.scss */
+/* line 228, ../sass/_trendrr.scss */
 .share-icons a.envelope:hover i {
   color: #fff;
 }
 
-/* line 236, ../sass/_trendrr.scss */
+/* line 235, ../sass/_trendrr.scss */
 .close-share {
   display: none;
   width: 38px;
@@ -9152,72 +9229,6 @@ a {
   left: 0;
   background-color: rgba(255, 255, 255, 0.5);
   margin: 0 auto;
-}
-
-/*------------------------------------*\
-	#Modal
-\*------------------------------------*/
-/* line 257, ../sass/_trendrr.scss */
-.modal {
-  overflow: auto;
-}
-/* line 259, ../sass/_trendrr.scss */
-.modal h5, .modal h4, .modal p {
-  text-align: center;
-}
-/* line 261, ../sass/_trendrr.scss */
-.modal h5 i, .modal h4 i, .modal p i {
-  padding: 1px;
-}
-/* line 266, ../sass/_trendrr.scss */
-.modal img {
-  width: 100%;
-  margin: 0 0 20px 0;
-}
-/* line 271, ../sass/_trendrr.scss */
-.modal svg {
-  right: 0;
-  top: 0;
-  margin: 2px;
-}
-/* line 277, ../sass/_trendrr.scss */
-.modal .action-bar {
-  background-color: #FBFBFB;
-  margin-bottom: 25px;
-}
-/* line 280, ../sass/_trendrr.scss */
-.modal .action-bar .share-icons {
-  margin-top: -77px;
-}
-/* line 285, ../sass/_trendrr.scss */
-.modal .favorite-button {
-  position: absolute;
-  right: 25px;
-  top: 55px;
-  line-height: 17px;
-  padding: 0px;
-  width: inherit;
-  opacity: .6;
-}
-/* line 294, ../sass/_trendrr.scss */
-.modal .favorite-button i {
-  padding: 10px 10px 8px 10px;
-}
-
-/* line 300, ../sass/_trendrr.scss */
-.modal-body {
-  padding: 0;
-}
-
-/* line 304, ../sass/_trendrr.scss */
-.modal-dialog {
-  padding: 0;
-}
-
-/* line 308, ../sass/_trendrr.scss */
-.modal-content {
-  border: none;
-  padding: 10px;
 }
 
 /* Custom, iPhone Retina */
@@ -9270,171 +9281,194 @@ a {
   }
 }
 /* Extra Small Devices, Phones */
-@media only screen and (min-width: 580px) {
-  /* line 33, ../sass/_responsive.scss */
-  .content {
-    padding: 3px 16px;
-  }
-}
 /* Small Devices, Tablets */
 @media only screen and (min-width: 768px) {
-  /* line 38, ../sass/_responsive.scss */
+  /* line 39, ../sass/_responsive.scss */
+  .col-sm-6 {
+    width: 49.3%;
+  }
+  /* line 39, ../sass/_responsive.scss */
+  .col-sm-6:nth-child(2n + 2) {
+    margin-right: 0;
+  }
+
+  /* line 42, ../sass/_responsive.scss */
+  .banner h1 {
+    font-size: 4em;
+    padding-top: 30px;
+  }
+  /* line 42, ../sass/_responsive.scss */
+  .banner h1 h2 {
+    margin: 30px 0 0 0;
+  }
+
+  /* line 43, ../sass/_responsive.scss */
+  .search-nav input:focus {
+    width: 200px;
+  }
+
+  /* line 44, ../sass/_responsive.scss */
   h1 {
     font-size: 34px;
   }
-  /* line 39, ../sass/_responsive.scss */
+  /* line 45, ../sass/_responsive.scss */
   h1 span {
     font-size: 16px;
   }
 
-  /* line 41, ../sass/_responsive.scss */
+  /* line 47, ../sass/_responsive.scss */
   h1, h2, h3,
   h4, h5, h6 {
     margin: 0 0 20px 0;
   }
 
-  /* line 44, ../sass/_responsive.scss */
-  .modal-dialog {
-    margin-top: 100px;
-  }
-
-  /* line 48, ../sass/_responsive.scss */
-  .banner h1 {
-    font-size: 4em;
-  }
-  /* line 48, ../sass/_responsive.scss */
-  .banner h1 h2 {
-    margin: 30px 0 0 0;
-  }
-
-  /* line 50, ../sass/_responsive.scss */
-  .search-nav input:focus {
-    width: 200px;
-  }
-
-  /* line 52, ../sass/_responsive.scss */
+  /* line 51, ../sass/_responsive.scss */
   .modal-dialog.createModal {
     max-width: 400px;
     margin: 100px auto;
   }
 
-  /* line 54, ../sass/_responsive.scss */
-  .col-sm-6 {
-    width: 49.3%;
-  }
-  /* line 54, ../sass/_responsive.scss */
-  .col-sm-6:nth-child(2n + 2) {
-    margin-right: 0;
-  }
-
-  /* line 56, ../sass/_responsive.scss */
+  /* line 52, ../sass/_responsive.scss */
   .modal-content {
     padding: 40px;
   }
 
-  /* line 57, ../sass/_responsive.scss */
+  /* line 53, ../sass/_responsive.scss */
   .modal-dialog {
     width: 720px;
     padding: 0;
+    margin-top: 100px;
   }
 
-  /* line 58, ../sass/_responsive.scss */
-  .modal svg {
+  /* line 56, ../sass/_responsive.scss */
+  .modal .leaveModal {
+    position: absolute;
+    top: 0;
+    right: 0;
     margin: 13px;
   }
-
-  /* line 59, ../sass/_responsive.scss */
+  /* line 57, ../sass/_responsive.scss */
   .modal .favorite-button {
     right: 60px;
     top: 60px;
   }
-
-  /* line 60, ../sass/_responsive.scss */
+  /* line 58, ../sass/_responsive.scss */
   .modal h5 {
     font-size: 18px;
   }
 }
 /* Medium Devices, Desktops */
 @media only screen and (min-width: 992px) {
-  /* line 68, ../sass/_responsive.scss */
+  /* line 69, ../sass/_responsive.scss */
+  .col-sm-6:nth-child(2n + 2) {
+    margin-right: 1.33%;
+  }
+
+  /* line 70, ../sass/_responsive.scss */
+  .col-md-4 {
+    width: 32.4%;
+  }
+  /* line 70, ../sass/_responsive.scss */
+  .col-md-4:nth-child(3n + 3) {
+    margin-right: 0;
+  }
+
+  /* line 73, ../sass/_responsive.scss */
   section.firstSection {
     padding-top: 50px;
   }
 }
 /* Large Devices, Desktops */
 @media only screen and (min-width: 1200px) {
-  /* line 74, ../sass/_responsive.scss */
+  /* line 81, ../sass/_responsive.scss */
+  .col-md-4 {
+    width: 32.4%;
+  }
+  /* line 81, ../sass/_responsive.scss */
+  .col-md-4:nth-child(3n + 3) {
+    margin-right: 1.33%;
+  }
+
+  /* line 82, ../sass/_responsive.scss */
+  .col-lg-3 {
+    width: 24%;
+  }
+  /* line 82, ../sass/_responsive.scss */
+  .col-lg-3:nth-child(4n + 4) {
+    margin-right: 0;
+  }
+
+  /* line 85, ../sass/_responsive.scss */
   h1 {
     font-size: 42px;
   }
-  /* line 75, ../sass/_responsive.scss */
+  /* line 86, ../sass/_responsive.scss */
   h1 span {
     font-size: 20px;
   }
 
-  /* line 78, ../sass/_responsive.scss */
+  /* line 89, ../sass/_responsive.scss */
   h2 {
     font-size: 36px;
   }
-  /* line 79, ../sass/_responsive.scss */
+  /* line 90, ../sass/_responsive.scss */
   h2 span {
     font-size: 18px;
   }
 
-  /* line 82, ../sass/_responsive.scss */
+  /* line 93, ../sass/_responsive.scss */
   h3 {
     font-size: 30px;
   }
-  /* line 83, ../sass/_responsive.scss */
+  /* line 94, ../sass/_responsive.scss */
   h3 span {
     font-size: 15px;
   }
 
-  /* line 86, ../sass/_responsive.scss */
+  /* line 97, ../sass/_responsive.scss */
   h4 {
     font-size: 20px;
   }
-  /* line 87, ../sass/_responsive.scss */
+  /* line 98, ../sass/_responsive.scss */
   h4 span {
     font-size: 16px;
   }
 
-  /* line 90, ../sass/_responsive.scss */
+  /* line 101, ../sass/_responsive.scss */
   h5 {
     font-size: 18px;
     font-weight: 300;
   }
-  /* line 92, ../sass/_responsive.scss */
+  /* line 103, ../sass/_responsive.scss */
   h5 span {
     font-size: 15px;
     font-weight: 300;
   }
 
-  /* line 96, ../sass/_responsive.scss */
+  /* line 107, ../sass/_responsive.scss */
   h6 {
     font-size: 14px;
     font-weight: bold;
   }
-  /* line 98, ../sass/_responsive.scss */
+  /* line 109, ../sass/_responsive.scss */
   h6 span {
     font-size: 12px;
     font-weight: normal;
   }
 
-  /* line 103, ../sass/_responsive.scss */
+  /* line 114, ../sass/_responsive.scss */
   .modal.youtube iframe {
     width: 853px;
     height: 480px;
   }
 
-  /* line 107, ../sass/_responsive.scss */
+  /* line 118, ../sass/_responsive.scss */
   .formFrame h1 {
     font-size: 39px;
   }
 
-  /* line 109, ../sass/_responsive.scss */
+  /* line 120, ../sass/_responsive.scss */
   .video-modal-mirror {
     width: 869px;
   }
 }
-/* Large Devices, Desktops */

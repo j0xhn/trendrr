@@ -667,17 +667,7 @@ h3 {
   cursor: pointer;
   top: -47px;
 }
-.leaveModal{
-  position: absolute;
-  top: 4px;
-  right: 5px;
-  opacity: .4;
-  font-size: 19px;
-}
-.leaveModal:hover{
-  opacity: .5;
-  cursor: pointer;
-}
+
 
 
 .about {
@@ -819,9 +809,6 @@ figure {
 /* - - - - - - - - - - - - *\
   #GENERAL
 \* - - - - - - - - - - - - */
-section {
-  overflow: auto;
-}
 
 
 

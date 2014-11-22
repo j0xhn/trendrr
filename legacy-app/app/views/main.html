@@ -1,6 +1,6 @@
 
 <div class="top-nav">
-
+<div class="content">
 <!-- - - - - - 
   #TOP LEFT 
   - - - - - - - -->
@@ -77,7 +77,7 @@
     </div>
   </div>
 </div>
-<br>
+</div>
 
 
 
@@ -105,7 +105,7 @@
 <!-- Main List -->
 <ul class='main-list'>
 
-  <li class="item" ng-click="setItem(item, 0)" ng-repeat="item in list | orderByPriority | orderBy:'overallVotes.value':true| orderBy:myOrder:myOrderReverse | filter: sortField : true | filter: search || property:'tags':search:undefined:true | limitTo: 100">
+  <li class="item col-xs-12 col-sm-6 col-md-4 col-lg-3 pad0" ng-click="setItem(item, 0)" ng-repeat="item in list | orderByPriority | orderBy:'overallVotes.value':true| orderBy:myOrder:myOrderReverse | filter: sortField : true | filter: search || property:'tags':search:undefined:true | limitTo: 100">
     <img ng-src="{{item.image}}" ng-mouseover='showOverall(item, $event)'> 
 
     <div class="item-info">
@@ -115,12 +115,65 @@
     </div> 
   </li>
 </ul>
+
+
+
 </section>
 
 
 <script src="../scripts/filter-page.js"></script>
 
 
+
+    <div class="modal fade" id="modal">
+        <div class="modal-dialog bg-white">
+            <div class="modal-content no-border pad0b">
+                <div class="leaveModal">
+                    <a class="fl mar10b visible-xs"><i class="fa fa-chevron-left"></i>&nbsp;Sneak Peeks</a>
+                    <svg class="animated zoomIn hidden-xs" width=".5cm" height=".5cm" viewBox="0 0 400 400"> <g stroke="#999999"><line x1="100" y1="300" x2="300" y2="100" stroke-width="20" /> <line x1="100" y1="100" x2="300" y2="300" stroke-width="20" /></g><i class="icon-remove"></i> </svg>
+                </div>
+
+                <div class="main-display">
+                    <img src="{{ selectedItem.image }}" alt="{{ selectedItem.name }}" />
+
+
+
+                    <div class="deal-hover-information">
+
+                        <div class="bottom-buttons">
+
+                            <div class="fr txt-white gotham favorite">
+                                <i class="fa fa-heart-o"></i>&nbsp;{{ selectedItem.overallscore.value }}
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="fr share-icons">
+
+                    <a class="google" href="https://plus.google.com/115831039491548021485/posts"><i class="fa fa-google-plus txt-pink"></i></a>
+                    <a class="facebook" href="https://www.facebook.com/veryjane"><i class="fa fa-facebook txt-blue-dark"></i></a>
+                    <a class="twitter" href="https://twitter.com/janedeals"><i class="fa fa-twitter txt-blue"></i></a>
+                    <a class="pinterest" href="http://www.pinterest.com/veryjane/"><i class="fa fa-pinterest txt-red"></i></a>
+                    <a class="envelope" href="mailto:"><i class="fa fa-envelope-o txt-grayLight"></i></a>
+
+                </div>
+
+                <h4>
+                    <div class="favorite d-i"><i class="fa fa-heart-o"></i>&nbsp;{{selectedItem.overallVotes.value}}&nbsp;<p class="txt-grayLighter d-i">|</p></div>&nbsp;{{ selectedItem.name }}
+                </h4>
+
+                <p class="txt-gray-dark">{{ selectedItem.tagline }}</p>
+
+                <hr class="max50"/>
+
+                <h5 class="normal f100"><a href="#"> Specific Seller Name Here</a></h5>
+
+            </div>
+        </div>
+    </div>
 
 
 
@@ -150,24 +203,22 @@
 <!-- - - - - - ->
   #MODAL
 < - - - - - - -->
-  <div class='modal fade' id="modal">
+<div class='modal fade' id="modal">
   <div class="modal-dialog">
     <div class="modal-content">
-
-<!-- LOGIN MODAL -->
+      <i class="leaveModal fa fa-times" ng-click="cancel()"></i>
+      <!-- LOGIN MODAL -->
       <div class="modal-login model-open-up" ng-controller='LoginCtrl' >
         <h1>You need to be logged in to do that</h1>
         <img ng-click='submitLogin() 'src='../images/login_1.png'/>
         <a ng-click="loginPrompt()"> no thanks</a>
       </div>
 
-<!-- MODAL BODY -->
-      <div class="modal-body model-open-up">
-        <i class="leaveModal" ng-click="cancel()">x</i>
-          
+      <!-- MODAL BODY -->
+      <div class="modal-body model-open-up">          
         <div class="item-modal">
           <section>
-              <img class="main-image" src="{{ selectedItem.image }}">
+            <img class="main-image" src="{{ selectedItem.image }}">
           </section>
 
           <section class="pad10b">
@@ -244,13 +295,7 @@
 </div><!-- /.modal -->
 </div>
 <!-- CREATE -->
-  
-<!-- SIGNUP -->
-<!-- SUBMIT PROFILE -->
-  <div class='signup'>
-   <a ng-click="callCreateModal($event)" id='createBtn'><h1>Nominate a Startup</h1></a>
-<!-- testing for URL Parameters      {{param}} test -->
-  </div>
-  <script src='/scripts/main.js'></script>
+
+<script src='/scripts/main.js'></script>
 
 </div>
