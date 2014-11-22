@@ -87,12 +87,13 @@
 <div class="col" id="center">
 <!-- Banner -->
 <section class='banner'>
+  <div>
+
+  </div>
   <h1>Utah Valley's Hottest 100</h1>
   <input class="hidden-xs mar30b" type='search' ng-model='search' placeholder="search criteria" autofocus>
-  <div class='actions'>
-    <button class='btn btn-default clear'>
-      <p>submit a friend</p>
-    </button>
+  <div class='banner-actions'>
+    <a ng-click="callCreateModal($event)" id='createBtn'>Nominate a Startup</a>
   </div>
 </section>
 
@@ -100,7 +101,7 @@
 
 
 
-
+<section class="content">
 <!-- Main List -->
 <ul class='main-list'>
 
@@ -114,46 +115,9 @@
     </div> 
   </li>
 </ul>
+</section>
 
-<div id="list-container" class="container" >
-    <div class="mix category-1 card post item" data-myorder="{{$index}}" ng-click="setItem(item, 0)" ng-repeat="item in list | orderBy:'overallVotes.value':true| orderBy:myOrder:myOrderReverse | filter: sortField : true | filter: search || property:'tags':search:undefined:true | limitTo: 100" on-finish-render ng-cloak >
-        <div class="col-sm-3 hidden-xs noPadding-left">
-            <div class="chart mix-info item-info">
-                <p class="ng-binding">
-                    {{item.overallVotes.value}}
-                    
-                </p>
-            </div>
 
-            <div class="pagePreview">
-                <a class="ng-binding" target="_blank"><img alt="" ng-src="{{item.picture}}" class=
-                "img-responsive img-mobile" style = "min-width 189px; min-height: 189px; max-width 189px; max-height: 189px" src="{{item.picture}}"></a>
-            </div>
-        </div>
-
-        <div class="col-xs-8 col-sm-6 col-lg-7">
-            <h2><a target="_blank" class="ng-binding mix-title">{{item.fullName}}</a></h2>
-
-            <h4 class="ng-binding">{{item.bio}}</h4>
-            <a class="tweet-this-button btn btn-primary" ng-href="https://twitter.com/intent/tweet?url=https://productbuzz.co&amp;via=productbuzzHQ&amp;hashtags=redditmade&amp;text=redditmade - Crowdfunding projects backed by Reddit community - Buzz: 2472 on" href="https://twitter.com/intent/tweet?url=https://productbuzz.co&amp;via=productbuzzHQ&amp;hashtags=redditmade&amp;text=redditmade - Crowdfunding projects backed by Reddit community - Buzz: 2472 on">share the buzz</a>
-        </div>
-
-        <div class="col-xs-4 col-sm-3 col-lg-2 offsetTop">
-            <p class="text-left buzz showUpdate ng-binding"><img alt=""
-            class="img-responsive rating img-mobile" src=
-            "images/bee.png"> {{post.buzz}}{{$index+25}}</p>
-
-            <p class="text-left hot showUpdate ng-binding"><img alt=""
-            class="img-responsive rating trend img-mobile" src=
-            "images/fire.png">
-            {{post.buzz/(post.alive/60/60) | number:0}}{{$index+37}}°</p>
-
-            <p class="text-left votes showUpdate ng-binding"><img alt=""
-            class="img-responsive rating thumb img-mobile" src=
-            "images/thumbs.png"> {{post.votes}}{{$index+75}}</p>
-        </div>
-    </div>
-</div>
 <script src="../scripts/filter-page.js"></script>
 
 

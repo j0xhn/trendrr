@@ -46,9 +46,10 @@ $scope.commentCreate = function (threadFromView, selectedItem, userID){
         var itemRef = dbRef.child('/'+listName+'/'+selectedItem.guid+'/comments/');
         itemRef.push({'user': userID,'comment': threadFromView,'value':1});
         itemRef.commentCount++;
-        $( '#commentCreateForm' ).each(function(){
-        this.reset();
-        });
+        $scope.list = listService.getList();
+        // $( '#commentCreateForm' ).each(function(){
+        // this.reset();
+        // });
         //rewards user for engagment 
     } else {
         listService.loginPrompt();
