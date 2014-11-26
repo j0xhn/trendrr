@@ -13,10 +13,8 @@
  
 
     <link rel="stylesheet" href="bower_components/angular-xeditable/dist/css/xeditable.css" />
-    <link rel="stylesheet" href="styles/main.css">
     <link rel ="stylesheet" href = "styles/mobile.css" />
-    <link rel="stylesheet" href="styles/responsive.css">
-    <link rel="stylesheet" href="styles/shorthand.css">
+
     <!-- endbuild -->
     <!-- FONTS -->
     <link rel="stylesheet" href="styles/font-awesome/css/font-awesome.min.css">
@@ -26,6 +24,24 @@
   </head>
   <body ng-app="100App">
 
+    <!-- Enables facebook comments -->
+<script>
+    window.fbAsyncInit = function () {
+        FB.init({
+            appId: '443562285673607',
+            xfbml: true,
+            version: 'v2.2'
+        });
+    };
+
+    (function (d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) { return; }
+        js = d.createElement(s); js.id = id;
+        js.src = "//connect.facebook.net/en_US/sdk.js";
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+</script>
 
 
 
