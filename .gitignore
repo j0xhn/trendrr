@@ -1,3 +1,4 @@
 100-realEstate/*
 node-app/config/*
 node-app/node-modules/*
+secret/
