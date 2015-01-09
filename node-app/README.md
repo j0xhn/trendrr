@@ -1,6 +1,13 @@
 Trendrr
 =======================
 
+Questions
+-----------------
+- Where do users get written to? (how to follow trails...)
+- Where can you reference them?  Different collection references (find db.contestants)?
+- Good MongoDB tutorials?
+- Wgere 
+
 Milestones
 -----------------
 
